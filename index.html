@@ -3,9 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our hobbies website</title>
+    <title>KickOff FC - Football Updates</title>
+    <style>
+        /* Base styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        /* STEP 2 UPDATE: Simplified flexbox container for header layout */
+        header {
+            display: flex;
+            justify-content: space-between; /* Pushes logo to left and nav to right */
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1a1d29;     /* Kept the modern dark background color */
+        }
+
+        /* Logo styling */
+        .logo-container a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e94560;                /* Vibrant accent color for KickOff FC */
+            text-decoration: none;
+        }
+
+        /* STEP 2 UPDATE: Nav link container wrapper spacing */
+        nav {
+            display: flex;
+            gap: 20px;                     /* Adds clean spacing between your links */
+        }
+
+        /* Navigation list item resetting styles */
+        .nav-links {
+            display: flex;
+            gap: 20px;                     
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #e94560;                /* Turns logo color on hover for visual depth */
+        }
+
+        /* STEP 3 STYLING: Hero welcome section banner */
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), url('football-pitch.jpg') no-repeat center center/cover;
+            color: white;
+        }
+
+        .hero-section h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #bdc3c7;
+        }
+
+        /* STEP 3 STYLING: Attention-grabbing LaLiga CTA button */
+        .laliga-btn {
+            display: inline-block;
+            background-color: #ff9f43;      /* Vibrant orange button color background */
+            color: #1a1d29;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .laliga-btn:hover {
+            background-color: #f39c12;      /* Smoothly darkens slightly on desktop hover */
+            transform: translateY(-2px);    /* Subtle lift effect */
+        }
+    </style>
 </head>
 <body>
-    <h1>Dream League Soccer</h1>
+
+    <!-- Header Navigation Bar containing both your logo and your partner's navigation items -->
+    <header>
+        
+        <!-- 1. Logo section -->
+        <div class="logo-container">
+            <a href="#">KickOff FC</a>
+        </div>
+
+        <!-- 2. Navigation Area: Your partner can still insert custom icon sets within this flex item -->
+        <nav>
+            <ul class="nav-links">
+                <!-- PARTNER: Paste your code/icons for "Homepage" here -->
+                <li><a href="#">Join Now</a></li>
+                
+                <!-- PARTNER: Paste your code/icons for "Matches" here -->
+                <li><a href="#">Matches</a></li>
+                
+                <!-- PARTNER: Paste your code/icons for "POTS" here -->
+                <li><a href="#">POTS</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- STEP 3 UPDATE: Hero layout content with text and relocated call-to-action button -->
+        <div class="hero-section">
+            <h1>Welcome to KickOff FC</h1>
+            <p>Your ultimate hub for matches, team standings, and Player of the Season updates.</p>
+            <a href="standings.html#join-form" class="laliga-btn">Join Now for LaLiga Updates</a>
+        </div>
+
+    </main>
+
 </body>
-</html>vvvvvvv
+</html>
+
