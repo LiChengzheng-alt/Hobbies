@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligue 1 Matches</title>
+    <link rel="stylesheet" href="football.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2>Ligue 1 Matches</h2>
+        <!-- 2. Navigation Area: Your partner can still insert custom icon sets within this flex item -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="JoinNowDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" href="#">Join Now</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby=matchesDropdown">
+                                <li><a class="dropdown-item" href="Ligue1JoinNow.html">Ligue 1</a></li>
+                                <li><a class='dropdown-item' href='#'>La Liga</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="MatchesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" href="#">Matches</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby=TeamStandingsDropdown">
+                                <li><a class="dropdown-item" href="Ligue1Matches.html">Ligue 1</a></li>
+                                <li><a class='dropdown-item' href='#'>La Liga</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="TeamStandingsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" href="#">Team Standings</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby=POTSDropdown">
+                                <li><a class="dropdown-item" href="Ligue1TeamStanding.html">Ligue 1</a></li>
+                                <li><a class='dropdown-item' href='#'>La Liga</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="POTSDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" href="#">POTS</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby=JoinNowDropdown">
+                                <li><a class="dropdown-item" href="Ligue1POTS.html">Ligue 1</a></li>
+                                <li><a class='dropdown-item' href='#'>La Liga</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Used as a navigation link for users who wants to view each option. Default is current matches-->
+        <section>
+            <a href="#Current Matches">
+                <p id="Current Matches">Current Matches</p>
+            </a>
+            <a href="#Upcoming Matches">
+                <p>Upcoming Matches</p>
+            </a>
+            <a href="#Past Matches">
+                <p>Past Matches</p>
+            </a>
+        </section>
+
+        <hr>
+        <!-- Will show matches from the start of it to 2 weeks after the game ends-->
+        <section id="Current Matches"></section>
+
+        <hr>
+        <!-- Will show the matches from 1 matchday after the matchday started-->
+        <section id="Upcoming Matches">
+            <h2>Upcoming Matches in 26/27</h2>
+            <h3>Matchday 1</h3>
+            <p><strong>Marseille - Stasbourg</strong></p>
+            <p>Date: 22 August 2026 on 2:45 am SGT Timing.</p>
+            <p><strong>Lens - Auxerre</strong></p>
+            <p>Date: 22 August 2026 on 11:15 pm SGT Timing.</p>
+            <p><strong>Troyes - Paris FC</strong></p>
+            <p>Date: 23 August 2026 on 2:45 am SGT Timing.</p>
+            <p><strong>Le Mans - Brest</strong></p>
+            <p>Date: 23 August 2026 on 2:45 am SGT Timing.</p>
+            <p><strong>Nice - Lorient</strong></p>
+            <p>Date: 23 August 2026 on 2:45 am SGT Timing.</p>
+            <p><strong>Toulouse - OL</strong></p>
+            <p>Date: 23 August 2026 on 2:45 am SGT Timing.</p>
+            <p><strong>Angers - LOSC</strong></p>
+            <p>Date: 23 August 2026 on 9:00 am SGT Timing.</p>
+            <p><strong>Le Havre - Monaco</strong></p>
+            <p>Date: 23 August 2026 on 11:15 pm SGT Timing.</p>
+            <p><strong>PSG - Rennes</strong></p>
+            <p>Date: 24 August 2026 on 2:45 am SGT Timing.</p>
+        </section>
+
+        <!-- Will show matchday 34 in 25/26 as the matchday has completed-->
+        <hr>
+        <section id="Past Matches">
+            <h2>Past Matches</h2>
+            <h3>Matchday 34 in 25/26</h3>
+            <p><strong>Strasbourg 5 - 4 Monaco</strong></p>
+            <p>Date: 18 May 2026 in SGT Timing</p>
+            <!-- Copy iframe from clubs YouTube channel instead of Ligue 1 as Ligue 1 blocks iframe-->
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/5oe9IilGDPY"
+                title="Résumé, Strasbourg 5-4 AS Monaco - 34e journée Ligue 1" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><strong>OL 0 - 4 Lens</strong></p>
+            <p>Date: 18 May 2026 in SGT Timing</p>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/6Qifyle8FqM"
+                title="OL - RC Lens : L’OL s’incline face à Lens et termine 4e de Ligue 1, direction les barrages de C1"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><strong>Marseille 3 - 1 Rennes</strong></p>
+            <p>Date: 18 May 2026 in SGT Timing</p>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/s0Gwjj5rMkQ"
+                title="OM 3-1 Rennes | Victory highlights 🔥" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><strong>Nice 0 - 0 Metz</strong></p>
+            <p>Date: 18 May 2026 in SGT Timing</p>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/gTLeknV084k"
+                title="Résumé : OGC Nice - FC Metz (0-0) | J34 Ligue 1 McDonald&#39;s 2025-2026" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><strong>Lorient 0 - 2 Le Havre</strong></p>
+            <p>Date: 18 May 2026 in SGT Timing</p>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/mwT9RpTZ9Wg"
+                title="FC lorient - HAC (0-2) : le résumé du match" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><strong>Paris FC 2 - 1 PSG</strong></p>
+            <p>Date: 18 May 2026 in SGT Timing</p>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/-TnxNFZru7I"
+                title="A goal from BARCOLA to close out this Ligue 1 season | PFC/PSG: highlights 📺" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><strong>LOSC 0 - 2 Auxerre</strong></p>
+            <p>Date: 18 May 2026 in SGT Timing</p>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/pIxXn6oySls"
+                title="LOSC Highlights I Le LOSC perd contre Auxerre mais accroche la Champions League ⭐️ @eToro France"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><strong>Nantes 0 - 0 Toulouse</strong></p>
+            <p>Date: 18 May 2026 in SGT Timing. Vacated.</p>
+            <p>No video is available</p>
+            <p><strong>Brest 1 - 1 Angers</strong></p>
+            <p>Date: 18 May 2026 in SGT Timing</p>
+            <iframe width="600" height="400" src="https://www.youtube.com/embed/UxXKedhOD4c" title="Brest 1-1 Angers"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+</body>
+
+</html>
