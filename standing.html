@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Standings - Afraz hobby | Chengzheng and Afraz hobbies</title>
+    <link rel="stylesheet" href="football.css" />
+    <link rel="stylesheet" href="standings.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Header Navigation Bar - same as homepage for consistency -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html">Chengzheng and Afraz hobbies</a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="JoinNowDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Afraz hobby</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="JoinNowDropdown">
+                                <li><a class="dropdown-item" href="LaLigaJoinNow.html">Join Now</a></li>
+                                <li><a class="dropdown-item" href="#">Matches</a></li>
+                                <li><a class="dropdown-item active" href="standings.html">Team Standings</a></li>
+                                <li><a class="dropdown-item" href="#">POTS</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="MatchesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Chengzheng hobby</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="MatchesDropdown">
+                                <li><a class="dropdown-item" href="joinnowchengzheng.html">Join Now</a></li>
+                                <li><a class="dropdown-item" href="project.html">Projects</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="hero-section">
+            <h1>Team Standings</h1>
+            <p>Final 2025/2026 season tables for La Liga and Ligue 1.</p>
+        </div>
+
+        <section class="standings-section">
+            <!-- Search box to filter by team name -->
+            <div class="search-wrapper">
+                <input type="text" id="teamSearch" class="form-control" placeholder="Search for a team...">
+            </div>
+
+            <!-- Tabs to switch between leagues -->
+            <ul class="nav nav-tabs league-tabs" id="leagueTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="laliga-tab" data-bs-toggle="tab" data-bs-target="#laliga-pane" type="button" role="tab" aria-controls="laliga-pane" aria-selected="true">La Liga</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="ligue1-tab" data-bs-toggle="tab" data-bs-target="#ligue1-pane" type="button" role="tab" aria-controls="ligue1-pane" aria-selected="false">Ligue 1</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="leagueTabContent">
+                <!-- LA LIGA TABLE -->
+                <div class="tab-pane fade show active" id="laliga-pane" role="tabpanel" aria-labelledby="laliga-tab">
+                    <div class="table-responsive">
+                        <table class="table standings-table" id="laligaTable">
+                            <thead>
+                                <tr>
+                                    <th>Pos</th>
+                                    <th class="team-col">Club</th>
+                                    <th>Pld</th>
+                                    <th>W</th>
+                                    <th>D</th>
+                                    <th>L</th>
+                                    <th>GF</th>
+                                    <th>GA</th>
+                                    <th>GD</th>
+                                    <th>Pts</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="champions-league"><td>1</td><td class="team-col">Barcelona</td><td>38</td><td>31</td><td>1</td><td>6</td><td>95</td><td>36</td><td>+59</td><td><strong>94</strong></td></tr>
+                                <tr class="champions-league"><td>2</td><td class="team-col">Real Madrid</td><td>38</td><td>27</td><td>5</td><td>6</td><td>77</td><td>35</td><td>+42</td><td><strong>86</strong></td></tr>
+                                <tr class="champions-league"><td>3</td><td class="team-col">Villarreal</td><td>38</td><td>22</td><td>6</td><td>10</td><td>72</td><td>46</td><td>+26</td><td><strong>72</strong></td></tr>
+                                <tr class="champions-league"><td>4</td><td class="team-col">Atlético Madrid</td><td>38</td><td>21</td><td>6</td><td>11</td><td>62</td><td>44</td><td>+18</td><td><strong>69</strong></td></tr>
+                                <tr class="champions-league"><td>5</td><td class="team-col">Real Betis</td><td>38</td><td>15</td><td>15</td><td>8</td><td>59</td><td>48</td><td>+11</td><td><strong>60</strong></td></tr>
+                                <tr class="europa-league"><td>6</td><td class="team-col">Celta Vigo</td><td>38</td><td>14</td><td>12</td><td>12</td><td>53</td><td>48</td><td>+5</td><td><strong>54</strong></td></tr>
+                                <tr class="conference-league"><td>7</td><td class="team-col">Getafe</td><td>38</td><td>15</td><td>6</td><td>17</td><td>32</td><td>38</td><td>-6</td><td><strong>51</strong></td></tr>
+                                <tr><td>8</td><td class="team-col">Rayo Vallecano</td><td>38</td><td>12</td><td>14</td><td>12</td><td>41</td><td>44</td><td>-3</td><td><strong>50</strong></td></tr>
+                                <tr><td>9</td><td class="team-col">Valencia</td><td>38</td><td>13</td><td>10</td><td>15</td><td>46</td><td>55</td><td>-9</td><td><strong>49</strong></td></tr>
+                                <tr class="europa-league"><td>10</td><td class="team-col">Real Sociedad</td><td>38</td><td>11</td><td>13</td><td>14</td><td>59</td><td>61</td><td>-2</td><td><strong>46</strong></td></tr>
+                                <tr><td>11</td><td class="team-col">Espanyol</td><td>38</td><td>12</td><td>10</td><td>16</td><td>43</td><td>55</td><td>-12</td><td><strong>46</strong></td></tr>
+                                <tr><td>12</td><td class="team-col">Athletic Club</td><td>38</td><td>13</td><td>6</td><td>19</td><td>43</td><td>58</td><td>-15</td><td><strong>45</strong></td></tr>
+                                <tr><td>13</td><td class="team-col">Sevilla</td><td>38</td><td>12</td><td>7</td><td>19</td><td>46</td><td>60</td><td>-14</td><td><strong>43</strong></td></tr>
+                                <tr><td>14</td><td class="team-col">Alavés</td><td>38</td><td>11</td><td>10</td><td>17</td><td>44</td><td>56</td><td>-12</td><td><strong>43</strong></td></tr>
+                                <tr><td>15</td><td class="team-col">Elche</td><td>38</td><td>10</td><td>13</td><td>15</td><td>49</td><td>57</td><td>-8</td><td><strong>43</strong></td></tr>
+                                <tr><td>16</td><td class="team-col">Levante</td><td>38</td><td>11</td><td>9</td><td>18</td><td>47</td><td>61</td><td>-14</td><td><strong>42</strong></td></tr>
+                                <tr><td>17</td><td class="team-col">Osasuna</td><td>38</td><td>11</td><td>9</td><td>18</td><td>44</td><td>50</td><td>-6</td><td><strong>42</strong></td></tr>
+                                <tr class="relegation"><td>18</td><td class="team-col">Mallorca</td><td>38</td><td>11</td><td>9</td><td>18</td><td>47</td><td>57</td><td>-10</td><td><strong>42</strong></td></tr>
+                                <tr class="relegation"><td>19</td><td class="team-col">Girona</td><td>38</td><td>9</td><td>14</td><td>15</td><td>39</td><td>55</td><td>-16</td><td><strong>41</strong></td></tr>
+                                <tr class="relegation"><td>20</td><td class="team-col">Oviedo</td><td>38</td><td>6</td><td>11</td><td>21</td><td>26</td><td>60</td><td>-34</td><td><strong>29</strong></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="legend">
+                        <span class="legend-item"><span class="dot champions-league"></span> Champions League</span>
+                        <span class="legend-item"><span class="dot europa-league"></span> Europa League</span>
+                        <span class="legend-item"><span class="dot conference-league"></span> Conference League</span>
+                        <span class="legend-item"><span class="dot relegation"></span> Relegated</span>
+                    </div>
+                    <p class="table-note">Barcelona won their 29th title. Real Sociedad qualify for the Europa League as 2025-26 Copa del Rey winners.</p>
+                </div>
+
+                <!-- LIGUE 1 TABLE -->
+                <div class="tab-pane fade" id="ligue1-pane" role="tabpanel" aria-labelledby="ligue1-tab">
+                    <div class="table-responsive">
+                        <table class="table standings-table" id="ligue1Table">
+                            <thead>
+                                <tr>
+                                    <th>Pos</th>
+                                    <th class="team-col">Club</th>
+                                    <th>Pld</th>
+                                    <th>W</th>
+                                    <th>D</th>
+                                    <th>L</th>
+                                    <th>GF</th>
+                                    <th>GA</th>
+                                    <th>GD</th>
+                                    <th>Pts</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="champions-league"><td>1</td><td class="team-col">Paris Saint-Germain</td><td>34</td><td>24</td><td>4</td><td>6</td><td>74</td><td>29</td><td>+45</td><td><strong>76</strong></td></tr>
+                                <tr class="champions-league"><td>2</td><td class="team-col">Lens</td><td>34</td><td>22</td><td>4</td><td>8</td><td>66</td><td>35</td><td>+31</td><td><strong>70</strong></td></tr>
+                                <tr class="champions-league"><td>3</td><td class="team-col">Lille</td><td>34</td><td>18</td><td>7</td><td>9</td><td>52</td><td>37</td><td>+15</td><td><strong>61</strong></td></tr>
+                                <tr class="cl-qualifying"><td>4</td><td class="team-col">Lyon</td><td>34</td><td>18</td><td>6</td><td>10</td><td>53</td><td>40</td><td>+13</td><td><strong>60</strong></td></tr>
+                                <tr class="europa-league"><td>5</td><td class="team-col">Marseille</td><td>34</td><td>18</td><td>5</td><td>11</td><td>63</td><td>45</td><td>+18</td><td><strong>59</strong></td></tr>
+                                <tr class="europa-league"><td>6</td><td class="team-col">Rennes</td><td>34</td><td>17</td><td>8</td><td>9</td><td>59</td><td>50</td><td>+9</td><td><strong>59</strong></td></tr>
+                                <tr class="conference-league"><td>7</td><td class="team-col">Monaco</td><td>34</td><td>16</td><td>6</td><td>12</td><td>60</td><td>54</td><td>+6</td><td><strong>54</strong></td></tr>
+                                <tr><td>8</td><td class="team-col">Strasbourg</td><td>34</td><td>15</td><td>8</td><td>11</td><td>58</td><td>47</td><td>+11</td><td><strong>53</strong></td></tr>
+                                <tr><td>9</td><td class="team-col">Toulouse</td><td>34</td><td>12</td><td>9</td><td>13</td><td>47</td><td>46</td><td>+1</td><td><strong>45</strong></td></tr>
+                                <tr><td>10</td><td class="team-col">Lorient</td><td>34</td><td>11</td><td>12</td><td>11</td><td>48</td><td>51</td><td>-3</td><td><strong>45</strong></td></tr>
+                                <tr><td>11</td><td class="team-col">Paris FC</td><td>34</td><td>11</td><td>11</td><td>12</td><td>47</td><td>50</td><td>-3</td><td><strong>44</strong></td></tr>
+                                <tr><td>12</td><td class="team-col">Brest</td><td>34</td><td>10</td><td>9</td><td>15</td><td>43</td><td>55</td><td>-12</td><td><strong>39</strong></td></tr>
+                                <tr><td>13</td><td class="team-col">Angers</td><td>34</td><td>9</td><td>9</td><td>16</td><td>29</td><td>48</td><td>-19</td><td><strong>36</strong></td></tr>
+                                <tr><td>14</td><td class="team-col">Le Havre</td><td>34</td><td>7</td><td>14</td><td>13</td><td>32</td><td>44</td><td>-12</td><td><strong>35</strong></td></tr>
+                                <tr><td>15</td><td class="team-col">Auxerre</td><td>34</td><td>8</td><td>10</td><td>16</td><td>34</td><td>44</td><td>-10</td><td><strong>34</strong></td></tr>
+                                <tr class="relegation-playoff"><td>16</td><td class="team-col">Nice</td><td>34</td><td>7</td><td>11</td><td>16</td><td>37</td><td>60</td><td>-23</td><td><strong>32</strong></td></tr>
+                                <tr class="relegation"><td>17</td><td class="team-col">Nantes</td><td>34</td><td>5</td><td>9</td><td>20</td><td>29</td><td>52</td><td>-23</td><td><strong>24</strong></td></tr>
+                                <tr class="relegation"><td>18</td><td class="team-col">Metz</td><td>34</td><td>3</td><td>8</td><td>23</td><td>32</td><td>76</td><td>-44</td><td><strong>17</strong></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="legend">
+                        <span class="legend-item"><span class="dot champions-league"></span> Champions League</span>
+                        <span class="legend-item"><span class="dot cl-qualifying"></span> CL Qualifying</span>
+                        <span class="legend-item"><span class="dot europa-league"></span> Europa League</span>
+                        <span class="legend-item"><span class="dot conference-league"></span> Conference League Qualifying</span>
+                        <span class="legend-item"><span class="dot relegation-playoff"></span> Relegation Play-off</span>
+                        <span class="legend-item"><span class="dot relegation"></span> Relegated</span>
+                    </div>
+                    <p class="table-note">Paris Saint-Germain secured a record-extending 14th Ligue 1 title, their fifth in a row.</p>
+                </div>
+            </div>
+
+            <p id="noResults" class="no-results d-none">No teams match your search.</p>
+        </section>
+    </main>
+
+    <script src="standings.js"></script>
+</body>
+</html>
