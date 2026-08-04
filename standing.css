@@ -1,0 +1,157 @@
+/* Styles for the Team Standings page - built to match football.css theme */
+
+.standings-section {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 20px 80px 20px;
+}
+
+.search-wrapper {
+    max-width: 350px;
+    margin: 0 auto 25px auto;
+}
+
+.search-wrapper .form-control {
+    background-color: #12141f;
+    border: 1px solid #3a3d52;
+    color: white;
+}
+
+.search-wrapper .form-control:focus {
+    background-color: #12141f;
+    color: white;
+    border-color: #e94560;
+    box-shadow: 0 0 0 0.25rem rgba(233, 69, 96, 0.25);
+}
+
+.search-wrapper .form-control::placeholder {
+    color: #6b6e82;
+}
+
+/* Tabs */
+.league-tabs {
+    border-bottom: 1px solid #3a3d52;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.league-tabs .nav-link {
+    color: #bdc3c7;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    padding: 10px 24px;
+}
+
+.league-tabs .nav-link:hover {
+    color: white;
+}
+
+.league-tabs .nav-link.active {
+    color: #e94560;
+    background: transparent;
+    border-bottom: 3px solid #e94560;
+}
+
+/* Table */
+.standings-table {
+    background-color: rgba(26, 27, 41, 0.9);
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+}
+
+.standings-table thead {
+    background-color: #12141f;
+}
+
+.standings-table th {
+    color: #e94560;
+    text-align: center;
+    padding: 12px 8px;
+    border-bottom: 2px solid #3a3d52;
+}
+
+.standings-table td {
+    text-align: center;
+    padding: 10px 8px;
+    border-bottom: 1px solid #2a2c3d;
+    vertical-align: middle;
+}
+
+.standings-table .team-col {
+    text-align: left;
+    font-weight: 500;
+}
+
+.standings-table tbody tr:hover {
+    background-color: rgba(233, 69, 96, 0.12);
+}
+
+/* Qualification highlight colors - left border stripe */
+.standings-table tr.champions-league { border-left: 4px solid #2ecc71; }
+.standings-table tr.champions-league td.team-col { border-left: 4px solid #2ecc71; padding-left: 12px; }
+
+.standings-table tr.cl-qualifying td.team-col { border-left: 4px solid #58d68d; padding-left: 12px; }
+
+.standings-table tr.europa-league td.team-col { border-left: 4px solid #ff9f43; padding-left: 12px; }
+
+.standings-table tr.conference-league td.team-col { border-left: 4px solid #3498db; padding-left: 12px; }
+
+.standings-table tr.relegation-playoff td.team-col { border-left: 4px solid #f1c40f; padding-left: 12px; }
+
+.standings-table tr.relegation td.team-col { border-left: 4px solid #e74c3c; padding-left: 12px; }
+
+/* Legend */
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.legend-item {
+    color: #bdc3c7;
+    font-size: 0.85em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.dot.champions-league { background-color: #2ecc71; }
+.dot.cl-qualifying { background-color: #58d68d; }
+.dot.europa-league { background-color: #ff9f43; }
+.dot.conference-league { background-color: #3498db; }
+.dot.relegation-playoff { background-color: #f1c40f; }
+.dot.relegation { background-color: #e74c3c; }
+
+.table-note {
+    text-align: center;
+    color: #7f8c9a;
+    font-size: 0.85em;
+    margin-top: 15px;
+    padding: 0 20px;
+}
+
+.no-results {
+    text-align: center;
+    color: #bdc3c7;
+    margin-top: 20px;
+}
+
+/* Highlighted row when searching */
+.standings-table tr.search-match {
+    background-color: rgba(233, 69, 96, 0.2);
+}
+
+.standings-table tr.search-hidden {
+    display: none;
+}
