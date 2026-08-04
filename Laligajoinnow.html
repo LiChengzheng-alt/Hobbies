@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Now - Afraz hobby | Chengzheng and Afraz hobbies</title>
+    <link rel="stylesheet" href="football.css" />
+    <link rel="stylesheet" href="joinform.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Header Navigation Bar - same as homepage for consistency -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html">Chengzheng and Afraz hobbies</a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="JoinNowDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Afraz hobby</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="JoinNowDropdown">
+                                <li><a class="dropdown-item active" href="LaLigaJoinNow.html">Join Now</a></li>
+                                <li><a class="dropdown-item" href="#">Matches</a></li>
+                                <li><a class="dropdown-item" href="#">Team Standings</a></li>
+                                <li><a class="dropdown-item" href="#">POTS</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="MatchesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Chengzheng hobby</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="MatchesDropdown">
+                                <li><a class="dropdown-item" href="Ligue1Matches.html">Join Now</a></li>
+                                <li><a class="dropdown-item" href="projects.html">Projects</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="hero-section">
+            <h1>Join La Liga Updates</h1>
+            <p>Sign up to get match schedules, team standings, and Player of the Season updates straight to your inbox.</p>
+        </div>
+
+        <section id="join-form" class="form-section">
+            <div class="form-card">
+                <h3>Create your account</h3>
+                <p class="form-subtext">Fill in the details below to join the Afraz hobby community.</p>
+
+                <form id="joinNowForm" class="needs-validation" novalidate>
+                    <!-- Full Name -->
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="e.g. Afraz Rahman" required minlength="2">
+                        <div class="invalid-feedback">Please enter your full name (at least 2 characters).</div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+
+                    <!-- Favorite La Liga Team -->
+                    <div class="mb-3">
+                        <label for="favoriteTeam" class="form-label">Favorite La Liga Team</label>
+                        <select class="form-select" id="favoriteTeam" name="favoriteTeam" required>
+                            <option value="" selected disabled>Choose a team...</option>
+                            <option value="Real Madrid">Real Madrid</option>
+                            <option value="Barcelona">Barcelona</option>
+                            <option value="Atletico Madrid">Atletico Madrid</option>
+                            <option value="Sevilla">Sevilla</option>
+                            <option value="Valencia">Valencia</option>
+                            <option value="Villarreal">Villarreal</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a team.</div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="At least 8 characters" required minlength="8">
+                        <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
+                        <div class="invalid-feedback" id="confirmPasswordFeedback">Passwords do not match.</div>
+                    </div>
+
+                    <!-- How did you hear about us -->
+                    <div class="mb-3">
+                        <label for="referral" class="form-label">How did you hear about us? <span class="optional-text">(optional)</span></label>
+                        <select class="form-select" id="referral" name="referral">
+                            <option value="" selected>Prefer not to say</option>
+                            <option value="Friend">Friend or teammate</option>
+                            <option value="Social Media">Social Media</option>
+                            <option value="Search Engine">Search Engine</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+                        <label class="form-check-label" for="newsletter">Send me weekly La Liga match updates</label>
+                    </div>
+
+                    <!-- Terms -->
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+                        <label class="form-check-label" for="terms">I agree to the Terms and Conditions</label>
+                        <div class="invalid-feedback">You must agree before signing up.</div>
+                    </div>
+
+                    <!-- Success message -->
+                    <div id="formSuccessMessage" class="alert alert-success d-none" role="alert">
+                        You're in! Welcome to the Afraz hobby community.
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="laliga-btn">Join Now</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="joinform.js"></script>
+</body>
+</html>
