@@ -1,0 +1,141 @@
+/* Base styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)) no-repeat center center/cover;
+
+}
+
+/* STEP 2 UPDATE: Simplified flexbox container for header layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Pushes logo to left and nav to right */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1d29;
+    /* Kept the modern dark background color */
+}
+
+/* STEP 2 UPDATE: Nav link container wrapper spacing */
+nav {
+    display: flex;
+    gap: 20px;
+    /* Adds clean spacing between your links */
+}
+
+/* Navigation list item resetting styles */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e94560;
+    /* Turns logo color on hover for visual depth */
+}
+
+/* Logo styling */
+.logo-container a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e94560;
+    /* Vibrant accent color for KickOff FC */
+    text-decoration: none;
+}
+
+
+.video {
+    color: #bdc3c7;
+    display: inline-block;
+    background-color: black;
+    min-width: 600px;
+    max-width: 700px;
+    margin: 25px;
+    border-radius: 30px;
+    padding-right: 500px;
+    padding-bottom: 50px;
+}
+
+.video iframe {
+    margin-top: -50px;
+    padding-left: 90px;
+    aspect-ratio: 16/9;
+}
+
+.video p {
+    text-align: center;
+}
+
+.video {
+    padding-top: 20px;
+}
+
+main {
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
+}
+
+#curriculum {
+    color: #bdc3c7;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border: solid thin;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+table td {
+    border: solid thin;
+    color: white;
+}
+
+table th {
+    border: solid thin;
+    color: white;
+}
+
+table caption {
+    text-align: center;
+    color: white;
+    caption-side: top;
+    font-size: 30px;
+}
+
+main h3 {
+    color: #bdc3c7;
+    text-align: center;
+}
+
+hr {
+    color: white;
+}
+
+.ie {
+    color:#bdc3c7;
+    font-size: large;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.video h3 {
+    white-space: nowrap;
+    margin-bottom: 100px;
+    text-align: center;
+    padding-left: 50px;
+}

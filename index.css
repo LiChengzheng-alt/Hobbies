@@ -1,0 +1,178 @@
+/* Base styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
+
+}
+
+/* STEP 2 UPDATE: Simplified flexbox container for header layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Pushes logo to left and nav to right */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1d29;
+    /* Kept the modern dark background color */
+}
+
+main {
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
+}
+
+main table {
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
+}
+
+/* Logo styling */
+.logo-container a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e94560;
+    /* Vibrant accent color for Chengzheng and Afraz Hobbies */
+    text-decoration: none;
+}
+
+/* STEP 2 UPDATE: Nav link container wrapper spacing */
+nav {
+    display: flex;
+    gap: 20px;
+    /* Adds clean spacing between your links */
+}
+
+/* Navigation list item resetting styles */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e94560;
+    /* Turns logo color on hover for visual depth */
+}
+
+/* STEP 3 STYLING: Hero welcome section banner */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+}
+
+
+.hero-section h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #bdc3c7;
+}
+
+/* STEP 3 STYLING: Attention-grabbing LaLiga CTA button */
+.laliga-btn {
+    display: inline-block;
+    background-color: #ff9f43;
+    /* Vibrant orange button color background */
+    color: #1a1d29;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.laliga-btn:hover {
+    background-color: #f39c12;
+    /* don't need to put */
+    /* Smoothly darkens slightly on desktop hover */
+    transform: translateY(-2px);
+    /* Subtle lift effect */
+}
+
+.scripting {
+    display: inline-block;
+    background-color: darkblue;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.scripting:hover {
+    transform: translateY(-2px);
+}
+
+body h2 {
+    text-align: center;
+    color: white;
+}
+
+body h3,
+h4,
+h5 {
+    text-align: center;
+    padding-left: 100px;
+    margin-right: 50px;
+    color: white;
+}
+
+body p {
+    color: #bdc3c7;
+    text-align: center;
+}
+
+body hr {
+    color: white;
+}
+
+body ul li {
+    color: #bdc3c7;
+    text-align: center;
+    list-style-position: inside;
+}
+
+body table th,
+tr {
+    color: white;
+}
+
+section dd {
+    color: #bdc3c7;
+    text-align: center;
+}
+
+section dl {
+    color: #bdc3c7;
+    text-align: center;
+}
+
+section h2,
+h3,
+h4,
+h5 {
+    text-align: center;
+    padding-top: 20px;
+    margin-right: 100px;
+}
+
+section a {
+    margin: 0;
+    padding-top: 20px;
+}

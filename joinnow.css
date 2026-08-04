@@ -1,0 +1,97 @@
+/* Base styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)) no-repeat center center/cover;
+
+}
+
+/* STEP 2 UPDATE: Simplified flexbox container for header layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Pushes logo to left and nav to right */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1d29;
+    /* Kept the modern dark background color */
+}
+
+/* STEP 2 UPDATE: Nav link container wrapper spacing */
+nav {
+    display: flex;
+    gap: 20px;
+    /* Adds clean spacing between your links */
+}
+
+/* Navigation list item resetting styles */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e94560;
+    /* Turns logo color on hover for visual depth */
+}
+
+/* Logo styling */
+.logo-container a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e94560;
+    /* Vibrant accent color for Chengzheng and Afraz hobbies */
+    text-decoration: none;
+}
+
+main {
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
+}
+
+main h2 {
+    color: #bdc3c7;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+main h3 {
+    color: #bdc3c7;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+form {
+    color: #bdc3c7;
+}
+
+form fieldset {
+  border: 2px solid #4A5568; /* Line color and thickness */
+  padding: 15px;            /* Space inside the border */
+}
+
+form fieldset legend {
+  font-weight: bold;
+  text-align: center;       /* Adds space on left/right of title text */
+  color: #bdc3c7;
+  margin-bottom: 30px;
+}
+
+form fieldset label [] {
+    font-size: 2em;
+}
+
+.required {
+    color: red;
+}

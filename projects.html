@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chengzheng and Afraz hobbies</title>
+    <link rel="stylesheet" href="css/coding.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- Header Navigation Bar containing both your logo and your partner's navigation items -->
+    <header>
+        <!-- 1. Logo section -->
+        <div class="logo-container">
+            <a href="index.html">Chengzheng and Afraz hobbies</a>
+        </div>
+        <!-- 2. Navigation Area: Your partner can still insert custom icon sets within this flex item -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="JoinNowDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" href="#">Afraz hobby</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="matchesDropdown">
+                                <li><a class="dropdown-item" href="Ligue1JoinNow.html">Join Now</a></li>
+                                <li><a class="dropdown-item" href="#">Team Standings</a></li>
+                                <li><a class="dropdown-item" href="#">POTS</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="CodingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" href="#">Chengzheng hobby</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="CodingsDropdown">
+                                <li><a class="dropdown-item" href="joinnow.html">Join Now</a></li>
+                                <li><a class="dropdown-item" href='projects.html'>Projects</a></li>
+                                <li><a class="dropdown-item" href="LearnNow.html">Learn Coding</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="Intro">
+            <!-- My projects-->
+            <h1>Project Showcase</h1>
+            <p>Below are all my Project Showcase using Python</p>
+            <hr>
+        </section>
+        <h3>Difficulty Tier</h3>
+        <section id="button">
+            <a href="#all">All</a>
+            <a href=".Easy">Easy</a>
+            <a href=".Intermediate">Intermediate</a>
+        </section>
+        <section id="All" class="Intermediate">
+            <!-- Using Object-oriented programming to model smart plug devices-->
+            <h4>Object-oriented programming</h4>
+            <p>Uses an object-oriented programming to manage smart plug devices.</p>
+            <p>Difficulty: Intermediate</p>
+            <video src="multimedia/Video/OOP.mp4" width="600" height="500" controls></video>
+            <ul>
+                <li>Stores devices attributes like ID, name, and power consumption.</li>
+                <li>Tracks all plugs to compute metrics like average power consumption, find the highest-rated plug, and
+                    support adding, retrieving, or deleting records.</li>
+                <li>Demonstrates these features through the terminal, creating
+                    initial sample plugs, displaying outputs like average watts for power plugs, prompting the user to
+                    dynamically add or lookup devices, and updating the
+                    active record list upon deletion.</li>
+            </ul>
+        </section>
+        <section id="All" class="Intermediate">
+            <!-- Processing datas from sales.txt and create contents-->
+            <h4>Data Processing</h4>
+            <p>Parse data from sales.txt inside DataFiles folder.</p>
+            <p>Difficulty: Intermediate</p>
+            <video src="multimedia/Video/Data_Processor_and_Reporting_Script..mp4" width="600" height="500" controls></video>
+            <ul>
+                <li>It parse employee details like calculating their age using the datetime module and computing total
+                    sales revenue and commission.</li>
+                <li>It automatically creates a directory structure like SalesData, SalesReports, TopPerformers. It
+                    stores performance reports, separating high earners who make $15,000 or more to an elite_sales.txt
+                    report while putting other employees to a standard_sales.txt file.</li>
+                <li>Finally, it reads back and displays the processed records directly in the terminal console.</li>
+            </ul>
+        </section>
+        <section id="All" class="Intermediate">
+            <!-- An autonmated file manager that changes the file structures-->
+            <h4>Automated File Manager</h4>
+            <p>It has a large number of files designed to inspect directory contents.</p>
+            <p>Difficulty: Intermediate</p>
+            <video src="multimedia/Video/Automated_File_Manager.mp4" width="600" height="500" controls></video>
+            <ul>
+                <li>It iterates through .txt files in the directory to measure file sizes (in bytes), prints them,
+                    calculates the total and average file sizes.</li>
+                <li>It converts all .png files to .jpg files using os.path library.</li>
+                <li>It loops through text files (e.g., coffee.txt) and renames them using a numeric counter scheme
+                    (e.g., coffee11.txt, coffee12.txt, etc.).</li>
+            </ul>
+        </section>
+        <section id="All" class="Easy">
+            <!-- A while loop project that that ask users to order food/beverage.-->
+            <h4>A while loop project</h4>
+            <p>Ask the user to order food.</p>
+            <p>Difficulty: Easy</p>
+            <video src="multimedia/Video/Food_Ordering_System.mp4" width="600" height="500" controls></video>
+            <ul>
+                <li>It displays a menu which allows users to select food/beverage (e.g., 0 for Buy Burger, 1 for Buy
+                    Drink).</li>
+                <li>It prompts the user to enter the number of their selection and individual prices for each item
+                    ordered.</li>
+                <li>It calculates subtotal costs, adds them to a running grand total, and outputs the updated price.
+                </li>
+                <li>It features input validation for invalid options/quantities and prompts the user if they wish to add
+                    more orders (Y/N) before finalizing payment.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

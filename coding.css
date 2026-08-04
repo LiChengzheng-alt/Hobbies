@@ -1,0 +1,166 @@
+/* Base styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)) no-repeat center center/cover;
+}
+
+/* STEP 2 UPDATE: Simplified flexbox container for header layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Pushes logo to left and nav to right */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1d29;
+    /* Kept the modern dark background color */
+}
+
+/* STEP 2 UPDATE: Nav link container wrapper spacing */
+nav {
+    display: flex;
+    gap: 20px;
+    /* Adds clean spacing between your links */
+}
+
+/* Navigation list item resetting styles */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e94560;
+    /* Turns logo color on hover for visual depth */
+}
+
+main {
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
+}
+
+main h3 {
+    color: #bdc3c7;
+    text-align: center;
+    padding-bottom: 30px;
+}
+/* Logo styling */
+.logo-container a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e94560;
+    /* Vibrant accent color for KickOff FC */
+    text-decoration: none;
+}
+
+#Intro {
+    color: #bdc3c7;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#Intro h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+#Intro p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.Intermediate {
+    color: #bdc3c7;
+    display: inline-block;
+    background-color: black;
+    min-width: 600px;
+    max-width: 700px;
+    margin: 25px;
+    border-radius: 30px;
+}
+
+.Intermediate video {
+    margin-top: -50px;
+}
+
+.Intermediate h4,
+p {
+    text-align: center;
+}
+
+.Intermediate {
+    padding-top: 20px;
+}
+
+.Intermediate ul {
+    padding-top: 30px;
+}
+
+.Easy {
+    color: #bdc3c7;
+    display: inline-block;
+    background-color: black;
+    min-width: 600px;
+    max-width: 700px;
+    margin: 25px;
+    border-radius: 30px;
+}
+
+.Easy video {
+    margin-top: -50px;
+}
+
+.Easy h4,
+p {
+    text-align: center;
+}
+
+.Easy {
+    padding-top: 20px;
+}
+
+.Easy ul {
+    padding-top: 30px;
+}
+
+#Intro hr {
+    color: white;
+}
+
+#button {
+    display: flex;
+    gap: 100px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+/* Style the links inside #button */
+#button a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: black;
+    color: #bdc3c7;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    /* Pill shape */
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+#button a:hover {
+    background-color: black;
+    color: white;
+    border-color: #bdc3c7;
+}
