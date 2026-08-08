@@ -46,12 +46,16 @@ nav {
     /* Turns logo color on hover for visual depth */
 }
 
+.nav-links.active {
+    background-color: blue;
+}
+
 main {
     background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
 }
 
 main h3 {
-    color: #bdc3c7;
+    color: white;
     text-align: center;
     padding-bottom: 30px;
 }
@@ -65,12 +69,13 @@ main h3 {
 }
 
 #Intro {
-    color: #bdc3c7;
     text-align: center;
+    color:#bdc3c7;
     padding: 80px 20px;
 }
 
 #Intro h1 {
+    color: white;
     font-size: 42px;
     margin-bottom: 15px;
 }
@@ -80,57 +85,36 @@ main h3 {
     margin-bottom: 30px;
 }
 
-.Intermediate {
+.Intermediate, .Easy {
     color: #bdc3c7;
     display: inline-block;
     background-color: black;
-    min-width: 600px;
-    max-width: 700px;
-    margin: 25px;
+    width: 100%;
+    margin: 2px;
     border-radius: 30px;
 }
 
-.Intermediate video {
-    margin-top: -50px;
+.Intermediate:hover, .Easy:hover {
+    transform: translateY(-5px);
+}
+
+.Intermediate video, .Easy video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    padding: 0 10px;
 }
 
 .Intermediate h4,
-p {
+.Intermediate p, .Easy h4, .Easy p {
     text-align: center;
 }
 
-.Intermediate {
+.Intermediate, .Easy {
     padding-top: 20px;
 }
 
-.Intermediate ul {
-    padding-top: 30px;
-}
-
-.Easy {
-    color: #bdc3c7;
-    display: inline-block;
-    background-color: black;
-    min-width: 600px;
-    max-width: 700px;
-    margin: 25px;
-    border-radius: 30px;
-}
-
-.Easy video {
-    margin-top: -50px;
-}
-
-.Easy h4,
-p {
-    text-align: center;
-}
-
-.Easy {
-    padding-top: 20px;
-}
-
-.Easy ul {
+.Intermediate ul, .Easy ul {
     padding-top: 30px;
 }
 
@@ -141,26 +125,5 @@ p {
 #button {
     display: flex;
     gap: 100px;
-    margin: 20px 0;
-    justify-content: center;
-}
-
-/* Style the links inside #button */
-#button a {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: black;
-    color: #bdc3c7;
-    text-decoration: none;
-    border: 1px solid white;
-    border-radius: 20px;
-    /* Pill shape */
-    transition: all 0.2s ease;
-}
-
-/* Hover effect */
-#button a:hover {
-    background-color: black;
-    color: white;
-    border-color: #bdc3c7;
+    margin: 20px 38%;
 }
