@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)) no-repeat center center/cover;
-
+    overflow: scroll;
 }
 
 /* STEP 2 UPDATE: Simplified flexbox container for header layout */
@@ -56,33 +56,6 @@ nav {
     text-decoration: none;
 }
 
-
-.video {
-    color: #bdc3c7;
-    display: inline-block;
-    background-color: black;
-    min-width: 600px;
-    max-width: 700px;
-    margin: 25px;
-    border-radius: 30px;
-    padding-right: 500px;
-    padding-bottom: 50px;
-}
-
-.video iframe {
-    margin-top: -50px;
-    padding-left: 90px;
-    aspect-ratio: 16/9;
-}
-
-.video p {
-    text-align: center;
-}
-
-.video {
-    padding-top: 20px;
-}
-
 main {
     background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
 }
@@ -93,21 +66,25 @@ main {
 }
 
 table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 5% auto;
     border-collapse: collapse;
-    border: solid thin;
-    color: white;
-    margin: 0 auto;
+    border: solid thick black;
     text-align: center;
 }
 
+/* Apply padding to table cells instead */
+table th,
 table td {
-    border: solid thin;
-    color: white;
+    padding: 8px 10px;
+    border: solid thin black;
 }
 
-table th {
-    border: solid thin;
-    color: white;
+/* Scroll container wrapper */
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
 }
 
 table caption {
@@ -117,8 +94,12 @@ table caption {
     font-size: 30px;
 }
 
-main h3 {
-    color: #bdc3c7;
+main h1 {
+    padding-top: 5%;
+}
+
+main h1, main h2, main h3 {
+    color: white;
     text-align: center;
 }
 
@@ -127,15 +108,33 @@ hr {
 }
 
 .ie {
-    color:#bdc3c7;
+    color: #bdc3c7;
     font-size: large;
     text-align: center;
     margin-top: 30px;
 }
 
+.video {
+    color: #bdc3c7;
+    background-color: black;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.video:hover,
+.card-body:hover {
+    transform: translateY(-5px);
+}
+
+.video iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+}
+
 .video h3 {
-    white-space: nowrap;
-    margin-bottom: 100px;
+    white-space: normal;
+    margin-bottom: 20px;
     text-align: center;
-    padding-left: 50px;
 }
