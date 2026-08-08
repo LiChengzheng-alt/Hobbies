@@ -56,40 +56,117 @@ nav {
     text-decoration: none;
 }
 
-main {
-    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
-}
-
-main h2 {
-    color: #bdc3c7;
+main h2, main h3 {
+    color: white;
     text-align: center;
-    padding-bottom: 30px;
-}
-
-main h3 {
-    color: #bdc3c7;
-    text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
+    padding-top: 4%;
 }
 
 form {
     color: #bdc3c7;
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
 }
 
 form fieldset {
-  border: 2px solid #4A5568; /* Line color and thickness */
-  padding: 15px;            /* Space inside the border */
+    border: 1px solid red;
+    /* Line color and thickness */
+    margin: 20px auto; /* centeralised the form */
+    background-color: rgba(26, 27, 41, 0.9);
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+form .form .form-text {
+    color: #bdc3c7;
+    padding: 20px 0px;
+    text-indent: 15px;
 }
 
 form fieldset legend {
-  font-weight: bold;
-  text-align: center;       /* Adds space on left/right of title text */
-  color: #bdc3c7;
-  margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    /* Adds space on left/right of title text */
+    color: red;
+    margin-bottom: 30px;
 }
 
-form fieldset label [] {
-    font-size: 2em;
+form fieldset label {
+    margin-bottom: 5px;
+}
+
+form fieldset label[for='name'],
+form fieldset label[for='email'],
+form fieldset label[for='sage'] {
+    font-size: 1.5em;
+    text-indent: 10px;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+form fieldset #name, form fieldset #email, form fieldset #sage {
+    size: 1.5em;
+    width: 100%;
+}
+
+form fieldset label[for='role'] {
+    font-size: 1.5em;
+    text-indent: 10px;
+    margin-top: 10px;
+}
+
+form fieldset #role {
+    size: 1.5em;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    cursor: pointer;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    color: rgba(26, 27, 41, 0.85);
+}
+
+form fieldset p {
+    font-size: 1.5em;
+    text-indent: 10px;
+    padding: 10px 0 10px 0;
+}
+
+form fieldset input[type='radio'],  form fieldset input[type='checkbox']{
+    cursor: pointer;
+    margin-right: 12px; /* Adds space between the circle/box and the text */
+    margin-left: 20px;     /* Keeps the button aligned on the left */
+    margin-bottom: 10px;
+}
+
+
+form fieldset #Yourself {
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+form fieldset label[for='Yourself'] {
+    font-size: 1.5em;
+    padding: 10px 0px 20px 20px;
+}
+
+form fieldset #Feedback {
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+form fieldset label[for='Feedback'] {
+    font-size: 1.5em;
+    padding: 10px 0px 20px 20px;
+}
+
+form fieldset input[type='submit'] {
+    margin: 20px 0px 0 70px;
 }
 
 .required {
