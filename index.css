@@ -5,7 +5,6 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
-
 }
 
 /* STEP 2 UPDATE: Simplified flexbox container for header layout */
@@ -107,12 +106,14 @@ nav {
 .scripting {
     display: inline-block;
     background-color: darkblue;
-    color: white;
+    color: yellow;
     padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease, transform 0.2s ease;
+    margin-left: 3%;
+    margin-top: 2%;
 }
 
 .scripting:hover {
