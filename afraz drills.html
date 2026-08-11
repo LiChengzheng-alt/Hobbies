@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Coaching Drills - Afraz hobby | Chengzheng and Afraz hobbies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/drills.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Header Navigation Bar - same as homepage for consistency -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html">Chengzheng and Afraz hobbies</a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="JoinNowDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Afraz hobby</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="JoinNowDropdown">
+                                <li><a class="dropdown-item" href="LaLigaJoinNow.html">Join Now</a></li>
+                                <li><a class="dropdown-item active" href="drills.html">Drills</a></li>
+                                <li><a class="dropdown-item" href="diet.html">Fuel Plan</a></li>
+                                <li><a class="dropdown-item" href="necessities.html">Necessities</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="MatchesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Chengzheng hobby</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="MatchesDropdown">
+                               <li><a class="dropdown-item" href="../html/index.html">Homepage</a></li>
+                                <li><a class="dropdown-item" href="../chengzheng html/joinow.html">Join Now</a></li>
+                                <li><a class="dropdown-item" href='../chengzheng html/projects.html'>Projects</a></li>
+                                <li><a class="dropdown-item" href="../chengzheng html/learnow.html">Learn Coding</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <h1>Coaching Drills &amp; Training Plans</h1>
+            <p>Learn real football drills used to build the skills of top players - free, no sign up needed.</p>
+        </div>
+
+        <section class="drills-section">
+            <!-- Callout linking to the Necessities page -->
+            <div class="inspo-callout">
+                <h3>Got the right gear for these drills?</h3>
+                <p>Check out our <a href="necessities.html">Necessities page</a> for a rundown of the basic gear you'll want before training - boots, shin guards, and more.</p>
+                <a href="necessities.html" class="btn laliga-btn">Visit Necessities Page</a>
+            </div>
+
+            <!-- Warm-up video -->
+            <div class="warmup-section">
+                <h2>Warm-Up Routine</h2>
+                <a href="https://youtu.be/Kt9jjvfBfU4" target="_blank" rel="noopener noreferrer" class="video-thumb-link">
+                    <div class="video-thumb-wrapper">
+                        <img src="https://img.youtube.com/vi/Kt9jjvfBfU4/hqdefault.jpg" alt="Stamina and warm-up video thumbnail">
+                        <div class="play-overlay">
+                            <span class="play-icon">&#9658;</span>
+                        </div>
+                    </div>
+                    <span class="video-thumb-caption">Watch on YouTube</span>
+                </a>
+                <ul>
+                    <li>Light jog for 3-5 minutes to raise your heart rate.</li>
+                    <li>High knees and butt kicks, 2 sets of 20 metres each.</li>
+                    <li>Walking lunges and leg swings to loosen up your hips.</li>
+                    <li>A few short sprints at increasing speed to get your legs ready to go.</li>
+                </ul>
+            </div>
+
+            <!-- Random drill picker -->
+            <div class="random-box">
+                <p>Not sure what to practice today?</p>
+                <button type="button" class="btn laliga-btn" onclick="showRandomDrill()">Pick a Random Drill</button>
+                <p id="randomResult"></p>
+            </div>
+
+            <!-- CATEGORY: DRIBBLING -->
+            <h2 class="category-heading">Dribbling &amp; Ball Control</h2>
+            <div class="row">
+
+            <div class="col-md-6 mb-3">
+                <div class="drill-card">
+                <h4>Cone Weave <span class="level-text">(Beginner)</span></h4>
+                <p class="drill-meta">Duration: 10 minutes | Equipment: 6-8 cones or markers</p>
+                <ol>
+                    <li>Set up 6-8 cones in a straight line, about 1 metre apart.</li>
+                    <li>Dribble the ball through the cones using only the inside and outside of one foot, keeping the ball close.</li>
+                    <li>Turn at the end and weave back using your other foot.</li>
+                    <li>Repeat for 5 rounds, gradually increasing your speed as your control improves.</li>
+                </ol>
+                <p class="drill-tip">Tip: Keep your head up between touches so you get used to scanning the pitch while dribbling.</p>
+            </div>
+                </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="drill-card">
+                <h4>1v1 Box Isolation <span class="level-text">(Intermediate)</span></h4>
+                <p class="drill-meta">Duration: 15 minutes | Equipment: 4 cones, 1 partner</p>
+                <ol>
+                    <li>Mark out a 5x5 metre box with cones.</li>
+                    <li>One player attacks with the ball, the other defends inside the box.</li>
+                    <li>The attacker tries to dribble past the defender and out the far side; the defender tries to win the ball or push the attacker out of bounds.</li>
+                    <li>Swap roles after each attempt and complete 10 reps each.</li>
+                </ol>
+                <p class="drill-tip">Tip: Use quick changes of direction and a low centre of gravity to unbalance the defender before accelerating past them.</p>
+            </div>
+                </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="drill-card">
+                <h4>Cut-Inside Finish <span class="level-text">(Advanced)</span></h4>
+                <p class="drill-meta">Duration: 15 minutes | Equipment: 3 cones, a goal or target</p>
+                <ol>
+                    <li>Start near the touchline with the ball at your feet, facing the goal at an angle.</li>
+                    <li>Dribble toward a cone placed to represent a defender.</li>
+                    <li>Use a sharp inside-foot touch to cut infield past the cone, then immediately curl a shot toward the far corner.</li>
+                    <li>Complete 10 reps from the right side, then 10 from the left to develop both feet.</li>
+                </ol>
+                <p class="drill-tip">Tip: This is the exact wing-to-shot pattern that makes wide forwards like Lamine Yamal so dangerous - the touch and the shot should happen almost in one motion.</p>
+            </div>
+                </div>
+
+            </div>
+
+            <!-- CATEGORY: PASSING -->
+            <h2 class="category-heading">Passing &amp; Vision</h2>
+            <div class="row">
+
+            <div class="col-md-6 mb-3">
+                <div class="drill-card">
+                <h4>Wall Pass Accuracy <span class="level-text">(Beginner)</span></h4>
+                <p class="drill-meta">Duration: 10 minutes | Equipment: A flat wall, 2 cones</p>
+                <ol>
+                    <li>Place two cones on the wall about 1 metre apart to mark a target zone.</li>
+                    <li>Stand 5-8 metres back and pass the ball firmly into the target zone.</li>
+                    <li>Control the rebound with one touch and pass again.</li>
+                    <li>Complete 20 passes with your dominant foot, then 20 with your weaker foot.</li>
+                </ol>
+                <p class="drill-tip">Tip: Strike through the middle of the ball with the inside of your foot for a clean, accurate pass.</p>
+            </div>
+                </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="drill-card">
+                <h4>Rondo (Piggy in the Middle) <span class="level-text">(Intermediate)</span></h4>
+                <p class="drill-meta">Duration: 15 minutes | Equipment: Cones, 5+ players</p>
+                <ol>
+                    <li>Mark out a circle or square roughly 8x8 metres.</li>
+                    <li>Four or more players pass the ball around the outside while one or two defenders try to intercept it in the middle.</li>
+                    <li>Limit outside players to 1-2 touches to force quick decision making.</li>
+                    <li>Any player who loses the ball or gives a bad pass swaps into the middle.</li>
+                </ol>
+                <p class="drill-tip">Tip: Scan the pitch before the ball arrives so you already know your next pass.</p>
+            </div>
+                </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="drill-card">
+                <h4>Third Man Runs <span class="level-text">(Advanced)</span></h4>
+                <p class="drill-meta">Duration: 20 minutes | Equipment: Cones, 3+ players</p>
+                <ol>
+                    <li>Set up three players in a triangle roughly 15 metres apart.</li>
+                    <li>Player A passes to Player B, who lays the ball off first-time.</li>
+                    <li>As soon as A passes, Player C (the "third man") sprints into open space to receive the lay-off and drive forward.</li>
+                    <li>Rotate positions after every 5 reps so everyone practices the run, the pass, and the lay-off.</li>
+                </ol>
+                <p class="drill-tip">Tip: The timing of the run matters more than the speed - leave too early and you'll be caught offside or unmarked too soon.</p>
+            </div>
+                </div>
+
+            </div>
+
+            <!-- CATEGORY: SHOOTING -->
+            <h2 class="category-heading">Shooting &amp; Finishing</h2>
+            <div class="row">
+
+            <div class="col-md-6 mb-3">
+                <div class="drill-card">
+                <h4>Target Zone Shooting <span class="level-text">(Beginner)</span></h4>
+                <p class="drill-meta">Duration: 10 minutes | Equipment: A goal, cones to mark corners</p>
+                <ol>
+                    <li>Use cones to section off the two top corners of the goal as target zones.</li>
+                    <li>Place the ball 12-16 metres out and take 10 shots aiming for the target zones.</li>
+                    <li>Focus on a smooth run-up and planting your standing foot beside the ball.</li>
+                    <li>Track how many shots land in the target zones and try to beat your score next session.</li>
+                </ol>
+                <p class="drill-tip">Tip: Lean slightly over the ball on your strike to keep your shot low and on target.</p>
+            </div>
+                </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="drill-card">
+                <h4>First-Touch Finish <span class="level-text">(Intermediate)</span></h4>
+                <p class="drill-meta">Duration: 15 minutes | Equipment: A goal, 1 partner or rebounder</p>
+                <ol>
+                    <li>Have a partner feed you passes from different angles just outside the box.</li>
+                    <li>Aim to strike the ball first-time toward goal without taking a controlling touch.</li>
+                    <li>Alternate between passes to your left and right side to practice finishing across your body.</li>
+                    <li>Complete 15 reps, resting between sets.</li>
+                </ol>
+                <p class="drill-tip">Tip: Get your body side-on to the pass early so you're already balanced when the ball arrives.</p>
+            </div>
+                </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="drill-card">
+                <h4>Striker's Movement Circuit <span class="level-text">(Advanced)</span></h4>
+                <p class="drill-meta">Duration: 20 minutes | Equipment: A goal, cones, 1 server</p>
+                <ol>
+                    <li>Start on the edge of the box with a server holding the ball near the penalty spot.</li>
+                    <li>Make a checking run away from goal, then explode back toward the six-yard box.</li>
+                    <li>The server plays a low cross or through-ball timed to your run for a first-time finish.</li>
+                    <li>Vary your movement each rep: near post run, far post run, and dropping short.</li>
+                </ol>
+                <p class="drill-tip">Tip: This is the same central-striker movement Ousmane Dembélé developed when he was repositioned up front for PSG.</p>
+            </div>
+                </div>
+
+            </div>
+
+            <!-- CATEGORY: FITNESS -->
+            <h2 class="category-heading">Speed &amp; Agility</h2>
+            <div class="row">
+
+            <div class="col-md-6 mb-3">
+                <div class="drill-card">
+                <h4>Ladder Footwork Basics <span class="level-text">(Beginner)</span></h4>
+                <p class="drill-meta">Duration: 10 minutes | Equipment: Agility ladder (or cones/chalk lines)</p>
+                <ol>
+                    <li>Lay out an agility ladder flat on the ground, or mark 8-10 evenly spaced lines with chalk.</li>
+                    <li>Perform two-feet-in-each-box, then side shuffles, then in-in-out-out steps.</li>
+                    <li>Complete each pattern 3 times, resting 30 seconds between sets.</li>
+                    <li>Finish with a 10-metre sprint straight out of the ladder to connect footwork to game speed.</li>
+                </ol>
+                <p class="drill-tip">Tip: Stay on the balls of your feet and keep your steps light and quick rather than trying to go fast with heavy footfalls.</p>
+            </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="../js/drills.js"></script>
+</body>
+</html>
