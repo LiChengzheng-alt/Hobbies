@@ -15,32 +15,35 @@
     <header>
         <!-- 1. Logo section -->
         <div class="logo-container">
-            <a href="index.html">Chengzheng and Afraz hobbies</a>
+            <a href="/index/index.html">Afraz and Chengzheng's hobbies</a>
         </div>
         <!-- 2. Navigation Area: Your partner can still insert custom icon sets within this flex item -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- It creates an expanded navigation bar with dark theme for large device-->
+            <div class="container-fluid">  <!-- creates a container to hold the navigation bar-->
                 <!-- Toggler/collapsibe Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Creates a button hamburger navigation bar for smaller devices. type="button" is a regular clickable button, not submission of forms. data-bs-toggle="collapse" tells the bootstrap to make it to a hamburger button
+                data-bs-target="#navbarNav" is to target specific menu container to whether to open/close if clicked. aria-expanded="false" is used to tell that it is currently closed with a hamburger button.-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Navbar links -->
+                <!-- Close the grouped contents by using collapse and have an id for data-bs-target for the hamburger button interactivity-->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto"> <!-- Shift all the navigation bar contents to the right using margin start auto-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="SoccerDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false" href="#">Afraz hobby</a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="SoccerDropdown">
+                            <a class="nav-link dropdown-toggle" id="football" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" href="#">Afraz hobby</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="football">
                                 <li><a class="dropdown-item" href="laligajoinnow.html">Join Now</a></li>
                                 <li><a class="dropdown-item" href="#">Team Standings</a></li>
                                 <li><a class="dropdown-item" href="#">POTS</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="CodingDropdown" data-bs-toggle="dropdown"
-                                href="#">Chengzheng hobby</a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
+                        <li class="nav-item dropdown"> <!-- Create a dropdown -->
+                            <a class="nav-link dropdown-toggle" id="CodingDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+                                href="#">Chengzheng hobby</a> <!-- create a toggle for navigation -->
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="CodingDropdown"> <!-- create a dropdown menu for Chengzheng hobby in dark theme. Also, use aria-labelledby to group with the id for content display.-->
+                                <li><a class="dropdown-item" href="/index/index.html">Homepage</a></li>
                                 <li><a class="dropdown-item" href="/JoinNow/joinnow.html">Join Now</a></li>
                                 <li><a class="dropdown-item" href='/project/projects.html'>Projects</a></li>
                                 <li><a class="dropdown-item active" href="/LearnNow/LearnNow.html">Learn Coding</a></li>
@@ -52,25 +55,31 @@
         </nav>
     </header>
     <main>
+        <p class="current">Current Page</p>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="/index/index.html">Homepage</a></li>
+                <li class="breadcrumb-item active" aria-current='page'><a href="LearnNow.html">Learn Coding</a></li> <!-- So that the screen readers will know its current page if aria-current is implemented-->
+            </ol>
+        </nav>
         <!-- The curriculum for Python. It welcomes everyone who has no experience with python to expertise in python.-->
         <section id="curriculum">
             <h1>Our Python Curriculum</h1>
-            <p>This Curriculum welcomes everyone from people without experience with python to Professionals working
+            <p>This Curriculum welcomes everyone from beginners to professionals working
                 with Python.</p>
             <p>Timing: 8pm to 10pm on Wednesday and Saturday.</p>
-            <p>After finishing week 6, you will receive a digitial certification.</p>
+            <p>After finishing week 6, you will receive a digital certification.</p>
             <h2>What is Python?</h2>
             <p>Python is a high-level programming language created by Guido van Rossum in 1991.</p>
-            <p>We provide free quizzes for every session to test your understanding. Applicable to workplace culture!!!
+            <p>We provide free quizzes for every session to test your understanding. Applicable to workplace culture!
             </p>
         </section>
         <!-- How to download the VS code. It won't be covered in curriculum-->
         <hr>
-        <h3>Before joining the course, you can download the Visual Studio Code. We won't go through during the
-            curriculum.</h3>
+        <h3>Before joining the course, you can download Visual Studio Code. We will not cover installation during class time.</h3>
 
-        <p class="ie">You can click on the <a href="https://graphite.com/guides/install-vs-code-windows-mac-ubuntu"
-                target="_blank" class="text-info">link</a></p>
+        <p class="ie">Click here to <a href="https://graphite.com/guides/install-vs-code-windows-mac-ubuntu"
+                target="_blank" class="text-info">download</a></p>
         <section class="row g-4">
             <section class="col-12 col-md-6">
                 <section class="card bg-black text-light border-secondary h-100 rounded-4 p-3 shadow">
@@ -86,100 +95,99 @@
                     </section>
                 </section>
             </section>
-                <section class="col-12 col-md-6">
-                    <section class="card bg-black text-light border-secondary h-100 rounded-4 p-3 shadow">
-                        <section class="card-body">
-                            <section class="video container my-5">
-                                <h3 class="mb-4">How to install a Visual Studio Code on Macbook</h3>
-                                <iframe src="https://www.youtube.com/embed/w0xBQHKjoGo"
-                                    title="How to Install Visual Studio Code on Mac | Install VSCode on macOS"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </section>
+            <section class="col-12 col-md-6">
+                <section class="card bg-black text-light border-secondary h-100 rounded-4 p-3 shadow">
+                    <section class="card-body">
+                        <section class="video container my-5">
+                            <h3 class="mb-4">How to install Visual Studio Code on Macbook</h3>
+                            <iframe src="https://www.youtube.com/embed/w0xBQHKjoGo"
+                                title="How to Install Visual Studio Code on Mac | Install VSCode on macOS"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </section>
                     </section>
                 </section>
             </section>
-            <!-- A table to showcase the curriculum that covers the basics of Python. I use tables as it is easier.-->
-            <section class="my-5">
-                <section class="table-responsive">
-                    <table class="table table-dark table-striped table-hover rounded">
-                        <caption>What are we covering from week 1 to week 6.</caption>
-                        <thead>
-                            <tr>
-                                <th>Week</th>
-                                <th>Content</th>
-                                <th>Brief Detail of what is covered</th>
-                                <th>Hours</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td rowspan="2">1</td>
-                                <td>Introduction to Python</td>
-                                <td>IDE is an Integrated Development Environment combines a code editor, a
-                                    compiler/interpreter,
-                                    with a debugger into one user interface</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>Variable, Expression, Statement</td>
-                                <td>m = 5 + 2, m = 7. Variable = m. Expression = 5 + 2. Statement is m = 5 + 2.</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2">2</td>
-                                <td>Input, output, processing and exception</td>
-                                <td>Input = input(), output = print(), processing = 5 - 1, exception = exception
-                                    ValueError:
-                                </td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>If/elif/else statement</td>
-                                <td>if: tests the first condition, elif: tests extra conditions, and else: catches
-                                    everything
-                                    outside of if/elif.</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Loops</td>
-                                <td>For-loop is count-controlled loop, while loop is condition-controlled loop</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>String</td>
-                                <td>'I love food'</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>4 and 5</td>
-                                <td>List, Tuple, Dictionary</td>
-                                <td>List = [], Tuple = (), Dictionary = {}</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Function</td>
-                                <td>def add(why):</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Object-oriented Programming</td>
-                                <td>__init__ = constructor</td>
-                                <td>4</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+        </section>
+        <!-- A table to showcase the curriculum that covers the basics of Python. I use tables as it is easier.-->
+        <section class="my-5">
+            <section class="table-responsive">
+                <table class="table table-dark table-striped table-hover rounded">
+                    <caption>Course Overview: Week 1 to Week 6.</caption>
+                    <thead>
+                        <tr>
+                            <th>Week</th>
+                            <th>Content</th>
+                            <th>Brief Detail of what is covered</th>
+                            <th>Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">1</td>
+                            <td>Introduction to Python</td>
+                            <td>An IDE (Integrated Development Environment) combines a code editor, a
+                                compiler/interpreter,
+                                with a debugger into one user interface</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Variable, Expression, Statement</td>
+                            <td>m = 5 + 2, m = 7. Variable = m. Expression = 5 + 2. Statement is m = 5 + 2.</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">2</td>
+                            <td>Input, output, processing and exception</td>
+                            <td>Input = input(), output = print(), processing = 5 - 1, exception = exception
+                                ValueError:
+                            </td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>If/elif/else statement</td>
+                            <td>if: tests the first condition, elif: tests extra conditions, and else: catches
+                                everything
+                                outside of if/elif.</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Loops</td>
+                            <td>A for-loop is count-controlled loop, a while loop is condition-controlled loop</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>String</td>
+                            <td>'I love food'</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4 and 5</td>
+                            <td>List, Tuple, Dictionary</td>
+                            <td>List = [], Tuple = (), Dictionary = {}</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Function</td>
+                            <td>def add(why):</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Object-oriented Programming</td>
+                            <td>__init__ = constructor</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
+        </section>
         </section>
     </main>
 </body>
 
-</html>
 </html>

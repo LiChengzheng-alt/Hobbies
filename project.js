@@ -1,27 +1,27 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectItems = document.querySelectorAll('.project-item');
+document.addEventListener('DOMContentLoaded', () => { // Wait for all the HTML contents to be loaded before the JS content loads
+    var filterButtons = document.querySelectorAll('.filter-btn'); // Get every single filterButtons class. 3 total.
+    var projectItems = document.querySelectorAll('.project-item'); // Get every single projectItems class. 4 total.
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => { // Whenever a button is click, there will be certain type of event occuring with the command addEventListener()
-
-            // Remove the 'active' highlight class from all buttons
+    filterButtons.forEach(button => { // loop each button from the 3 buttons. Button is the button that is currently clicked.
+        button.addEventListener('click', () => { // Whenever this button is clicked, the function will run
+            // loop through each button again and removes the active class if the user clicked on another button
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add 'active' class to the clicked button
-            button.classList.add('active');
+            button.classList.add('active'); // add the active class if the user clicked on that button
 
-            // Get the target filter value (e.g., "all", "easy", or "intermediate")
-            const selectedCategory = button.getAttribute('data-filter');
+            // Filter the difficulty level of the projects based on its category
+            var category = button.getAttribute('data-filter');
 
-            // 3. Loop through each project and decide whether to show or hide it
+            // loop each projectItems. item is the current projectItems.
             projectItems.forEach(item => {
-                if (selectedCategory === 'all' || item.classList.contains(selectedCategory)) {
-                    item.style.display = 'block'; // Show project
+                var showAll = category === 'all'; // Display every cards if category is all.
+                var hasCategory = item.classList.contains(category); // Checks if the individual content contains a class name matching category
+
+                if (showAll || hasCategory) {
+                    item.style.display = 'block'; // If user select all, contents will display
                 } else {
-                    item.style.display = 'none';  // Hide project
+                    item.style.display = 'none'; // else, no content will be displayed.
                 }
             });
-        })
-    })
-})
+        });
+    });
+});

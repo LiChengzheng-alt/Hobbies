@@ -1,61 +1,65 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('joinnow');
-    
-    if (!form) return;
+function logerror(event) {
+    // 1. Get input values
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var age = document.getElementById("sage").value;
+    var role = document.getElementById("role").value;
 
-    const emailInput = document.getElementById('email');
-    const ageInput = document.getElementById('sage');
-    const goalCheckboxes = document.querySelectorAll('input[name="Goals"]');
+    // Check if only one radio button for experience level is selected
+    var expSelected = document.querySelector('input[name="exp"]:checked');
 
-    // Function to check custom rules
-    function checkValidation() {
-        // 1. Email check
-        if (emailInput && emailInput.value) {
-            if (!emailInput.value.includes('@')) {
-                emailInput.setCustomValidity('Email must include "@"');
-            } else {
-                emailInput.setCustomValidity(''); // Clear error if valid
-            }
-        }
+    // Check if at least one checkbox for goals is selected
+    var goalsSelected = document.querySelectorAll('input[name="Goals"]:checked');
 
-        // 2. Age check (Between 5 and 90)
-        if (ageInput && ageInput.value) {
-            const age = parseInt(ageInput.value, 10);
-            if (isNaN(age) || age < 5 || age > 90) {
-                ageInput.setCustomValidity('Please enter an age between 5 and 90.');
-            } else {
-                ageInput.setCustomValidity(''); // Clear error if valid
-            }
-        }
+    // 2. Validation Checks & Popup Alerts
 
-        // 3. Checkboxes check (At least one checked)
-        if (goalCheckboxes.length > 0) {
-            const isChecked = Array.from(goalCheckboxes).some(cb => cb.checked);
-            
-            // Clear message from all checkboxes
-            goalCheckboxes.forEach(cb => cb.setCustomValidity(''));
-
-            // Set message on first checkbox if none selected
-            if (!isChecked) {
-                goalCheckboxes[0].setCustomValidity('Please select at least one learning goal.');
-            }
-        }
+    // Check empty text fields
+    if (name === "") {
+        alert("Please enter your name.");
+        return false;
     }
 
-    // Run validation on submit
-    form.addEventListener('submit', function (event) {
-        // Run checks first
-        checkValidation();
+    if (email === "") {
+        alert("Please enter your email address.");
+        return false;
+    }
 
-        // Check if form is invalid
-        if (!form.checkValidity()) {
-            event.preventDefault(); // Stop form submission
-            form.reportValidity();  // THIS LINE MAKES THE POPUP SHOW UP!
-        }
-    });
+    // Check basic email format (@ symbol)
+    if (!email.includes("@") || !email.includes(".")) {
+        alert("Please enter a valid email address (e.g. name@example.com).");
+        return false;
+    }
 
-    // Also re-check checkboxes as soon as the user clicks one
-    goalCheckboxes.forEach(cb => {
-        cb.addEventListener('change', checkValidation);
-    });
-});
+    // Check age range
+    if (age === "" || isNaN(age)) {
+        alert("Please enter a valid age.");
+        return false;
+    }
+
+    var ageNum = parseInt(age);
+    if (ageNum < 5 || ageNum > 90) {
+        alert("Age must be between 5 and 90 years old.");
+        return false;
+    }
+
+    // Check dropdown option selection
+    if (role === "" || role === null) {
+        alert("Please select a role you wish to pursue.");
+        return false;
+    }
+
+    // Check radio buttons
+    if (!expSelected) {
+        alert("Please select your experience level.");
+        return false;
+    }
+
+    // Check checkboxes
+    if (goalsSelected.length === 0) {
+        alert("Please select at least one learning goal.");
+        return false;
+    }
+
+    // If all checks pass, allow form submission to proceed
+    return true;
+}

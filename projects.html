@@ -16,32 +16,35 @@
     <header>
         <!-- 1. Logo section -->
         <div class="logo-container">
-            <a href="index.html">Chengzheng and Afraz hobbies</a>
+            <a href="/index/index.html">Afraz and Chengzheng's hobbies</a>
         </div>
         <!-- 2. Navigation Area: Your partner can still insert custom icon sets within this flex item -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- It creates an expanded navigation bar with dark theme for large device-->
+            <div class="container-fluid">  <!-- creates a container to hold the navigation bar-->
                 <!-- Toggler/collapsibe Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Creates a button hamburger navigation bar for smaller devices. type="button" is a regular clickable button, not submission of forms. data-bs-toggle="collapse" tells the bootstrap to make it to a hamburger button
+                data-bs-target="#navbarNav" is to target specific menu container to whether to open/close if clicked. aria-expanded="false" is used to tell that it is currently closed with a hamburger button for screen readers. -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Navbar links -->
+                 <!-- Close the grouped contents by using collapse and have an id for data-bs-target for the hamburger button interactivity-->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto"> <!-- Shift all the navigation bar contents to the right using margin start auto-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="JoinNowDropdown" data-bs-toggle="dropdown"
-                                href="#">Afraz hobby</a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
+                            <a class="nav-link dropdown-toggle" id="football" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" href="#">Afraz hobby</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="football">
                                 <li><a class="dropdown-item" href="laligajoinnow.html">Join Now</a></li>
                                 <li><a class="dropdown-item" href="#">Team Standings</a></li>
                                 <li><a class="dropdown-item" href="#">POTS</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="CodingDropdown" data-bs-toggle="dropdown"
-                                href="#">Chengzheng hobby</a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
+                        <li class="nav-item dropdown"> <!-- Create a dropdown -->
+                            <a class="nav-link dropdown-toggle" id="CodingDropdown" role="button" aria-expanded="false" data-bs-toggle="dropdown"
+                                href="#">Chengzheng hobby</a> <!-- create a toggle for navigation -->
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="CodingDropdown"> <!-- create a dropdown menu for Chengzheng hobby in dark theme. Also, use aria-labelledby to group with the id for content display.-->
+                                <li><a class="dropdown-item" href="/index/index.html">Homepage</a></li> <!-- dropdown-item is an item inside the dropdown and dropdown-item active is the current dropdown feature-->
                                 <li><a class="dropdown-item" href="/JoinNow/joinnow.html">Join Now</a></li>
                                 <li><a class="dropdown-item active" href='/project/projects.html'>Projects</a></li>
                                 <li><a class="dropdown-item" href="/LearnNow/LearnNow.html">Learn Coding</a></li>
@@ -53,168 +56,185 @@
         </nav>
     </header>
     <main>
+        <p class="current">Current Page</p>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="/index/index.html">Homepage</a></li>
+                <li class="breadcrumb-item active" aria-current='page'><a href="projects.html">Projects</a></li>
+            </ol>
+        </nav>
         <section id="Intro">
             <!-- My projects-->
             <h1>Project Showcase</h1>
-            <p>Below are all my Project Showcase using Python</p>
+            <p>Below are my Python projects.</p>
             <hr>
         </section>
         <h3>Difficulty Tier</h3>
-        <section class="d-flex flex-wrap gap-2 mb-4 justify-content-center justify-content-md-start">
+        <section class="d-flex gap-2 mb-4 justify-content-center"> <!-- d-flex is a responsive feature that centralised the button in various device. gap-2 is having a small gap in each button. Margin-bottom is to add a margin below the button by 4. justify-content-center is to centralised the content using CSS tool -->
             <section id="button">
-                <button type="button" class="btn btn-outline-light filter-btn active" data-filter="all">All</button>
+                <button type="button" class="btn btn-outline-light filter-btn active" data-filter="all">All</button> <!-- creates a btn utility class with a white background and dark font color when active/hover. If inactive, uses white border and font color with no background. Uses filter btn to filter the contents based on the button type-->
                 <button type="button" class="btn btn-outline-light filter-btn" data-filter="easy">Easy</button>
                 <button type="button" class="btn btn-outline-light filter-btn"
                     data-filter="intermediate">Medium</button>
             </section>
         </section>
         <section class="project">
-        <section class="row g-4">
-            <section class="col-12 col-md-6 project-item intermediate">
-                <div class="card bg-black text-light border-secondary h-100 rounded-4 p-3 shadow">
-                    <div class="card-body">
-                        <section class="video container my-6">
-                            <section id="Intermediate">
-                                <section class="Intermediate">
-                                    <!-- Using Object-oriented programming to model smart plug devices-->
-                                    <h4>Object-oriented programming</h4>
-                                    <p>Uses an object-oriented programming to manage smart plug devices.</p>
-                                    <p>Difficulty: Intermediate</p>
-                                    <video src="/multimedia/Video/OOP.mp4" controls></video>
-                                    <ul>
-                                        <li>Stores devices attributes like ID, name, and power consumption.</li>
-                                        <li>Tracks all plugs to compute metrics like average power consumption, find the
-                                            highest-rated
-                                            plug,
-                                            and
-                                            support adding, retrieving, or deleting records.</li>
-                                        <li>Demonstrates these features through the terminal, creating
-                                            initial sample plugs, displaying outputs like average watts for power plugs,
-                                            prompting
-                                            the
-                                            user
-                                            to
-                                            dynamically add or lookup devices, and updating the
-                                            active record list upon deletion.</li>
-                                    </ul>
+            <section class="row g-4"> <!-- Creates a vertical and horizontal spacing between each card by 24 px. -->
+                <section class="col-12 col-md-6 col-lg-6 project-item intermediate"> <!-- it uses 6 grid for a medium or large device. 12 grid for a small device. It has a class project item(storing intermediate) -->
+                    <section class="card bg-black text-light border-secondary rounded-4"> <!-- Creates a layout container with black background with lighter font and grey border. Rounds the corner as well -->
+                        <section class="card-body"> <!-- uses a card-body that represents the content stored inside the cards-->
+                            <section class="video container my-5"> <!-- add a padding of size 5 for both margin-top and margin-bottom -->
+                                <section id="Intermediate">
+                                    <section class="Intermediate">
+                                        <!-- Using Object-oriented programming to model smart plug devices-->
+                                        <h4>Object-oriented programming</h4>
+                                        <p>Uses object-oriented programming to manage smart plug devices.</p>
+                                        <p>Difficulty: Intermediate</p>
+                                        <video src="/multimedia/Video/OOP.mp4" controls></video>
+                                        <ul>
+                                            <li>Store devices attributes like ID, name, and power consumption.</li>
+                                            <li>Tracks all plugs to compute metrics like average power consumption, find
+                                                the
+                                                highest-rated
+                                                plug,
+                                                and
+                                                support adding, retrieving, or deleting records.</li>
+                                            <li>Demonstrates these features through the terminal, creating
+                                                initial sample plugs, displaying outputs like average watts for power
+                                                plugs,
+                                                prompting
+                                                the
+                                                user
+                                                to
+                                                dynamically add or look up devices, and updating the
+                                                active record list upon deletion.</li>
+                                        </ul>
+                                    </section>
                                 </section>
                             </section>
                         </section>
-                    </div>
-                </div>
-            </section>
-            <section class="col-12 col-md-6 project-item intermediate">
-                <div class="card bg-black text-light border-secondary h-100 rounded-4 p-3 shadow">
-                    <div class="card-body">
-                        <section class="video container my-6">
-                            <section id="Intermediate">
-                                <section class="Intermediate">
-                                    <!-- Processing datas from sales.txt and create contents-->
-                                    <h4>Data Processing</h4>
-                                    <p>Parse data from sales.txt inside DataFiles folder.</p>
-                                    <p>Difficulty: Intermediate</p>
-                                    <video src="/multimedia/Video/Data_Processor_and_Reporting_Script..mp4"
-                                        controls></video>
-                                    <ul>
-                                        <li>It parse employee details like calculating their age using the datetime
-                                            module
-                                            and
-                                            computing
-                                            total
-                                            sales revenue and commission.</li>
-                                        <li>It automatically creates a directory structure like SalesData, SalesReports,
-                                            TopPerformers.
-                                            It
-                                            stores performance reports, separating high earners who make $15,000 or more
-                                            to
-                                            an
-                                            elite_sales.txt
-                                            report while putting other employees to a standard_sales.txt file.</li>
-                                        <li>Finally, it reads back and displays the processed records directly in the
-                                            terminal
-                                            console.
-                                        </li>
-                                    </ul>
+                    </section>
+                </section>
+                <section class="col-12 col-md-6 col-lg-6 project-item intermediate">
+                    <section class="card bg-black text-light border-secondary rounded-4">
+                        <section class="card-body">
+                            <section class="video container my-5">
+                                <section id="Intermediate">
+                                    <section class="Intermediate">
+                                        <!-- Processing datas from sales.txt and create contents-->
+                                        <h4>Data Processing</h4>
+                                        <p>Parses data from sales.txt inside the DataFiles folder.</p>
+                                        <p>Difficulty: Intermediate</p>
+                                        <video src="/multimedia/Video/Data_Processor_and_Reporting_Script..mp4"
+                                            controls></video>
+                                        <ul>
+                                            <li>It parses employee details like calculating their age using the datetime
+                                                module
+                                                and
+                                                computing
+                                                total
+                                                sales revenue and commission.</li>
+                                            <li>It automatically creates a directory structure like SalesData,
+                                                SalesReports,
+                                                TopPerformers.
+                                                It
+                                                stores performance reports, separating high earners who make $15,000 or
+                                                more
+                                                into
+                                                an
+                                                elite_sales.txt
+                                                report while saving other employees to a standard_sales.txt file.</li>
+                                            <li>Finally, it reads back and displays the processed records directly in
+                                                the
+                                                terminal
+                                                console.
+                                            </li>
+                                        </ul>
+                                    </section>
                                 </section>
                             </section>
                         </section>
-                    </div>
-                </div>
-            </section>
-            <section class="col-12 col-md-6 project-item intermediate">
-                <div class="card bg-black text-light border-secondary h-100 rounded-4 p-3 shadow">
-                    <div class="card-body">
-                        <section class="video container my-6">
-                            <section id="Intermediate">
-                                <section class="Intermediate">
-                                    <!-- An autonmated file manager that changes the file structures-->
-                                    <h4>Automated File Manager</h4>
-                                    <p>It has a large number of files designed to inspect directory contents.</p>
-                                    <p>Difficulty: Intermediate</p>
-                                    <video src="/multimedia/Video/Automated_File_Manager.mp4" controls></video>
-                                    <ul>
-                                        <li>It iterates through .txt files in the directory to measure file sizes (in
-                                            bytes),
-                                            prints
-                                            them,
-                                            calculates the total and average file sizes.</li>
-                                        <li>It converts all .png files to .jpg files using os.path library.</li>
-                                        <li>It loops through text files (e.g., coffee.txt) and renames them using a
-                                            numeric
-                                            counter
-                                            scheme
-                                            (e.g., coffee11.txt, coffee12.txt, etc.).</li>
-                                    </ul>
+                    </section>
+                </section>
+                <section class="col-12 col-md-6 col-lg-6 project-item intermediate">
+                    <section class="card bg-black text-light border-secondary rounded-4">
+                        <section class="card-body">
+                            <section class="video container my-5">
+                                <section id="Intermediate">
+                                    <section class="Intermediate">
+                                        <!-- An autonmated file manager that changes the file structures-->
+                                        <h4>Automated File Manager</h4>
+                                        <p>It is designed to inspect directory contents with a large number of files.</p>
+                                        <p>Difficulty: Intermediate</p>
+                                        <video src="/multimedia/Video/Automated_File_Manager.mp4" controls></video>
+                                        <ul>
+                                            <li>It iterates through .txt files in the directory to measure file sizes
+                                                (in
+                                                bytes),
+                                                prints
+                                                them,
+                                                calculates the total and average file sizes.</li>
+                                            <li>It converts all .png files to .jpg files using the os.path library.</li>
+                                            <li>It loops through text files (e.g., coffee.txt) and renames them using a
+                                                numeric
+                                                counter
+                                                scheme
+                                                (e.g., coffee11.txt, coffee12.txt, etc.).</li>
+                                        </ul>
+                                    </section>
                                 </section>
                             </section>
                         </section>
-                    </div>
-                </div>
-            </section>
-            <section class="col-12 col-md-6 project-item easy">
-                <div class="card bg-black text-light border-secondary h-100 rounded-4 p-3 shadow">
-                    <div class="card-body">
-                        <section class="video container my-6">
-                            <section id="Easy">
-                                <section class="Easy">
-                                    <!-- A while loop project that that ask users to order food/beverage.-->
-                                    <h4>A while loop project</h4>
-                                    <p>Ask the user to order food.</p>
-                                    <p>Difficulty: Easy</p>
-                                    <video src="/multimedia/Video/Food_Ordering_System.mp4" width="600" height="500"
-                                        controls></video>
-                                    <ul>
-                                        <li>It displays a menu which allows users to select food/beverage (e.g., 0 for
-                                            Buy
-                                            Burger, 1
-                                            for
-                                            Buy
-                                            Drink).</li>
-                                        <li>It prompts the user to enter the number of their selection and individual
-                                            prices
-                                            for
-                                            each
-                                            item
-                                            ordered.</li>
-                                        <li>It calculates subtotal costs, adds them to a running grand total, and
-                                            outputs
-                                            the
-                                            updated
-                                            price.
-                                        </li>
-                                        <li>It features input validation for invalid options/quantities and prompts the
-                                            user
-                                            if
-                                            they
-                                            wish to
-                                            add
-                                            more orders (Y/N) before finalizing payment.</li>
-                                    </ul>
+                    </section>
+                </section>
+                <section class="col-12 col-md-6 col-lg-6 project-item easy">
+                    <section class="card bg-black text-light border-secondary rounded-4">
+                        <section class="card-body">
+                            <section class="video container my-3"> <!-- -->
+                                <section id="Easy">
+                                    <section class="Easy">
+                                        <!-- A while loop project that that ask users to order food/beverage.-->
+                                        <h4>While loop project</h4>
+                                        <p>Asks the user to order food.</p>
+                                        <p>Difficulty: Easy</p>
+                                        <video src="/multimedia/Video/Food_Ordering_System.mp4" width="600" height="500"
+                                            controls></video>
+                                        <ul>
+                                            <li>It displays a menu which allows users to select food/beverage (e.g., 0
+                                                for
+                                                Buy
+                                                Burger, 1
+                                                for
+                                                Buy
+                                                Drink).</li>
+                                            <li>It prompts the user to enter the number of their selection and
+                                                individual
+                                                prices
+                                                for
+                                                each
+                                                item
+                                                ordered.</li>
+                                            <li>It calculates subtotal costs, adds them to a running grand total, and
+                                                outputs
+                                                the
+                                                updated
+                                                price.
+                                            </li>
+                                            <li>It features input validation for invalid options/quantities and prompts
+                                                the
+                                                user
+                                                if
+                                                they
+                                                wish to
+                                                add
+                                                more orders (Y/N) before finalizing payment.</li>
+                                        </ul>
+                                    </section>
                                 </section>
                             </section>
                         </section>
-                    </div>
-                </div>
+                    </section>
+                </section>
             </section>
         </section>
     </main>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="Submitted.css" />
+</head>
+
+<body>
+    <!-- Header Navigation Bar containing both your logo and your partner's navigation items -->
+    <header>
+        <!-- 1. Logo section -->
+        <div class="logo-container">
+            <a href="/index/index.html">Afraz and Chengzheng's hobbies</a>
+        </div>
+        <!-- 2. Navigation Area: Your partner can still insert custom icon sets within this flex item -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- It creates an expanded navigation bar with dark theme for large device-->
+            <div class="container-fluid">  <!-- creates a container to hold the navigation bar-->
+                <!-- Toggler/collapsibe Button -->
+                <!-- Creates a button hamburger navigation bar for smaller devices. type="button" is a regular clickable button, not submission of forms. data-bs-toggle="collapse" tells the bootstrap to make it to a hamburger button
+                data-bs-target="#navbarNav" is to target specific menu container to whether to open/close if clicked. aria-expanded="false" is used to tell that it is currently closed with a hamburger button.-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar links -->
+                 <!-- Close the grouped contents by using collapse and have an id for data-bs-target for the hamburger button interactivity-->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto"> <!-- Shift all the navigation bar contents to the right using margin start auto-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="football" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" href="#">Afraz hobby</a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="football">
+                                <li><a class="dropdown-item" href="laligajoinnow.html">Join Now</a></li>
+                                <li><a class="dropdown-item" href="#">Team Standings</a></li>
+                                <li><a class="dropdown-item" href="#">POTS</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown"> <!-- Create a dropdown -->
+                            <a class="nav-link dropdown-toggle" id="CodingDropdown" data-bs-toggle="dropdown" role="button" aria-expanded="false"
+                                href="#">Chengzheng hobby</a> <!-- create a toggle for navigation -->
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="CodingDropdown"> <!-- create a dropdown menu for Chengzheng hobby in dark theme. Also, use aria-labelledby to group with the id for content display.-->
+                                <li><a class="dropdown-item" href="/index/index.html">Homepage</a></li>
+                                <li><a class="dropdown-item" href="/JoinNow/joinnow.html">Join Now</a></li>
+                                <li><a class="dropdown-item" href='/project/projects.html'>Projects</a></li>
+                                <li><a class="dropdown-item" href="/LearnNow/LearnNow.html">Learn Coding</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <p class="current">Current Page</p>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="/index/index.html">Homepage</a></li>
+                <li class="breadcrumb-item active"><a href="/JoinNow/joinnow.html">Join Now</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="Submitted.html">Submitted</a></li>
+            </ol>
+        </nav>
+        <h1>You have successfully joined Chengzheng Hobby</h1>
+        <p>I will notify you via email regarding the next steps.</p>
+        <p>Here are the following details of your registration:</p>
+        <fieldset>
+            <h2>Submitted Information</h2>
+            <p>Name: <span id="name"></span></p>
+            <p>Email: <span id="email"></span></p>
+            <p>Age: <span id="sage" </span></p>
+            <p>Role: <span id="role"></span></p>
+            <p>Experience: <span id="exp"></span></p>
+            <p>Goals: <span id="Goals"></span></p>
+            <p>About Yourself: <span id="Yourself"></span></p>
+        </fieldset>
+    </main>
+    <script>
+        var formData = location.search;
+        formData = formData.substring(1, formData.length);
+        while (formData.indexOf("+") != -1) {
+            formData = formData.replace("+", " ");
+        }
+
+        formData = decodeURIComponent(formData);
+
+        var formArray = formData.split("&");
+
+        var goalsList = [];
+
+        for (var i = 0; i < formArray.length; i++) {
+
+            para = formArray[i].split("=");
+
+            switch (para[0]) {
+                case "name":
+                    document.getElementById("name").innerHTML = para[1];
+                    break;
+                case "email":
+                    document.getElementById("email").innerHTML = para[1];
+                    break;
+                case "sage":
+                    document.getElementById("sage").innerHTML = para[1];
+                    age = parseInt(para[1]);
+                    break;
+                case "role":
+                    document.getElementById("role").innerHTML = para[1];
+                    break;
+                case "exp":
+                    document.getElementById("exp").innerHTML = para[1];
+                    break;
+                case "activity":
+                    document.getElementById("activity").innerHTML = para[1];
+                    break;
+                case "Goals":
+                    goalsList.push(para[1]);
+                    if (goalsList.length > 0) {
+                        document.getElementById("Goals").innerHTML = goalsList.join(", ")
+                    }
+                    break;
+                case "Yourself":
+                    document.getElementById("Yourself").innerHTML = para[1];
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

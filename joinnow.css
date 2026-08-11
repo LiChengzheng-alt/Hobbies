@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)) no-repeat center center/cover;
-
+    overflow: scroll;
 }
 
 /* STEP 2 UPDATE: Simplified flexbox container for header layout */
@@ -56,6 +56,39 @@ nav {
     text-decoration: none;
 }
 
+.current {
+    text-align: left;
+    color:#bdc3c7;
+    padding: 15px 0 0 30px;  /* Spacing inside the container */
+}
+
+/* Target the breadcrumb container for spacing */
+.breadcrumb, 
+nav {
+  padding: 2px 16px;  /* Spacing inside the container */
+  margin-bottom: 20px; /* Spacing below the breadcrumb */
+}
+
+.breadcrumb {
+    --bs-breadcrumb-divider-color: #ffffff;
+}
+
+/* Target all breadcrumb links and text */
+nav a,
+.breadcrumb-item {
+  color: #ffffff; /* Forces link text color to white */
+  text-decoration: none;     /* Optional: removes link underlines */
+}
+
+/* Ensure links remain white on hover or active states */
+.breadcrumb a:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+}
+
+main {
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
+}
+
 main h2, main h3 {
     color: white;
     text-align: center;
@@ -63,23 +96,28 @@ main h2, main h3 {
     padding-top: 4%;
 }
 
+hr {
+    color: white;
+    margin-top: 30px;
+}
+
 form {
     color: #bdc3c7;
     display: flex;
     justify-content: center;
-    padding: 0 15px;
+    padding: 30px 15px 0 15px;
 }
 
 form fieldset {
     border: 1px solid red;
     /* Line color and thickness */
     margin: 20px auto; /* centeralised the form */
-    background-color: rgba(26, 27, 41, 0.9);
+    background-color: rgba(51, 52, 54, 0.9);
     border-radius: 10px;
     padding: 40px;
     width: 100%;
     max-width: 520px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 20px rgba(26, 27, 41, 0.85);
     box-sizing: border-box;
 }
 
@@ -87,6 +125,16 @@ form .form .form-text {
     color: #bdc3c7;
     padding: 20px 0px;
     text-indent: 15px;
+}
+
+.btn {
+    margin-left: 20%;
+    margin-top: 3%;
+}
+
+header p {
+    color:#bdc3c7;
+    margin-left: 20%;
 }
 
 form fieldset legend {
@@ -113,6 +161,7 @@ form fieldset label[for='sage'] {
 form fieldset #name, form fieldset #email, form fieldset #sage {
     size: 1.5em;
     width: 100%;
+    margin: 0 0 10px 0;
 }
 
 form fieldset label[for='role'] {
@@ -155,20 +204,15 @@ form fieldset label[for='Yourself'] {
     padding: 10px 0px 20px 20px;
 }
 
-form fieldset #Feedback {
-    margin-left: 5px;
-    margin-bottom: 20px;
-}
-
-form fieldset label[for='Feedback'] {
-    font-size: 1.5em;
-    padding: 10px 0px 20px 20px;
-}
-
 form fieldset input[type='submit'] {
-    margin: 20px 0px 0 70px;
+    margin: 5% 0 0 20%;
 }
 
 .required {
     color: red;
+}
+
+#buttn {
+    margin-left: 15%;
+    margin-top: 5%;
 }
