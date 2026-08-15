@@ -109,10 +109,6 @@
                             <h3>Chengzheng hobby</h3>
                             <!-- Description of my hobby-->
                             <p>My hobby is programming with Python and building real-world software applications.</p>
-                            <!-- Multimedia requirement: a short audio intro, alongside the video
-                                 walkthroughs already used on the Learn Coding page. figure/figcaption
-                                 is the correct semantic pairing for a piece of media plus its caption,
-                                 rather than just a bare <audio> tag with no labelling -->
                             <figure class="audio-figure">
                                 <figcaption>🎧 Listen: A 1-minute intro to why I picked up Python</figcaption>
                                 <audio controls>
@@ -137,14 +133,16 @@
                                 <li>Get into high-income roles like penetration tester</li>
                                 <li>Scale defense roles in cybersecurity</li>
                             </ul>
-                            <!-- A second, shorter audio clip tied to this specific section's content,
-                                 rather than bunching both clips together up top -->
+                            <!-- Multimedia requirement: a short audio intro, alongside the video
+                                 walkthroughs already used on the Learn Coding page. figure/figcaption
+                                 is the correct semantic pairing for a piece of media plus its caption,
+                                 rather than just a bare <audio> tag with no labelling -->
                             <figure class="audio-figure">
-                                <figcaption>🎧 Listen: 3 quick tips for landing a tech job with Python</figcaption>
+                                <figcaption>🎧 Listen: The music I listen to during my coding period</figcaption>
                                 <audio controls>
-                                    <source src="/multimedia/Audio/chengzheng-job-tips.mp3" type="audio/mpeg">
+                                    <source src="/multimedia/Audio/Morning-Routine-Lofi-Study-Music(chosic.com).mp3" type="audio/mp3">
                                     Your browser doesn't support inline audio.
-                                    <a href="/multimedia/Audio/chengzheng-job-tips.mp3">Download the audio</a> instead.
+                                    <a href="/multimedia/Audio/Morning-Routine-Lofi-Study-Music(chosic.com).mp3">Download the audio</a> instead.
                                 </audio>
                             </figure>
                         </section>
@@ -199,9 +197,9 @@
                     <h5>Chengzheng Hobby</h5>
                     <nav aria-label="Footer Chengzheng hobby links">
                         <ul class="footer-links">
-                            <li><a href="joinnow.html">Join Now</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="LearnNow.html">Learn Coding</a></li>
+                            <li><a class="dropdown-item" href="joinnow.html">Join Now</a></li>
+                            <li><a class="dropdown-item" href="projects.html">Projects</a></li>
+                            <li><a class="dropdown-item" href="LearnNow.html">Learn Coding</a></li>
                         </ul>
                     </nav>
                 </div>
