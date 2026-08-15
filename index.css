@@ -1,13 +1,23 @@
-/* Base styles for the page */
+/* Base styles for the page.
+   Dark theme is created with a translucent navy gradient layered over a solid
+   background-color fallback (rather than using "background:" shorthand alone),
+   so the colour stays solid/opaque everywhere - including in the small margin
+   gaps between <main> and <footer> - instead of letting the page's raw white
+   canvas bleed through as a lighter seam. */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
+    color: #f4f4f9;
+    background-color: #1a1d29;
+    background-image: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85));
+    overflow: scroll;
 }
 
-/* STEP 2 UPDATE: Simplified flexbox container for header layout */
+/* STEP 2 UPDATE: Simplified flexbox container for header layout.
+   Flexbox with justify-content: space-between is used instead of floats or
+   manual positioning, so the logo and Bootstrap navbar naturally sit at
+   opposite ends and stay vertically centred at any viewport width. */
 header {
     display: flex;
     justify-content: space-between;
@@ -18,12 +28,11 @@ header {
     /* Kept the modern dark background color */
 }
 
+/* Same fix as body: explicit background-color fallback alongside the gradient
+   image so <main> renders as solid opaque navy, matching the header/footer. */
 main {
-    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
-}
-
-main table {
-    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85)), no-repeat center center/cover;
+    background-color: #1a1d29;
+    background-image: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85));
 }
 
 /* Logo styling */
@@ -42,25 +51,32 @@ nav {
     /* Adds clean spacing between your links */
 }
 
-/* Navigation list item resetting styles */
-.nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.current {
+    text-align: left;
+    padding: 15px 0 0 30px;  /* Spacing inside the container */
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+/* Target the breadcrumb container for spacing */
+.breadcrumb, 
+nav {
+  padding: 2px 16px;  /* Spacing inside the container */
+  margin-bottom: 20px; /* Spacing below the breadcrumb */
 }
 
-.nav-links a:hover {
-    color: #e94560;
-    /* Turns logo color on hover for visual depth */
+.breadcrumb {
+    --bs-breadcrumb-divider-color: #ffffff;
+}
+
+/* Target all breadcrumb links and text */
+nav a,
+.breadcrumb-item {
+  color: #ffffff; /* Forces link text color to white */
+  text-decoration: none;     /* Optional: removes link underlines */
+}
+
+/* Ensure links remain white on hover or active states */
+.breadcrumb a:hover {
+  text-decoration: underline; /* Optional: underline on hover */
 }
 
 /* STEP 3 STYLING: Hero welcome section banner */
@@ -82,6 +98,14 @@ nav {
     color: #bdc3c7;
 }
 
+/* Caps paragraph-heavy blocks at a comfortable reading width and centres them, instead
+   of letting text run the full width of the screen on a large monitor. Re-used across
+   the hero text and both hobby sections so the whole page reads at one consistent measure */
+.content-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 /* STEP 3 STYLING: Attention-grabbing LaLiga CTA button */
 .laliga-btn {
     display: inline-block;
@@ -93,19 +117,21 @@ nav {
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease, transform 0.2s ease;
+    margin-left: 3%;
+    margin-top: 2%;
 }
 
 .laliga-btn:hover {
+    /* Smoothly darkens slightly on hover, then lifts up - gives clear,
+       tactile feedback that the button is interactive */
     background-color: #f39c12;
-    /* don't need to put */
-    /* Smoothly darkens slightly on desktop hover */
     transform: translateY(-2px);
-    /* Subtle lift effect */
 }
 
 .scripting {
     display: inline-block;
     background-color: darkblue;
+    /* Blue button color background */
     color: yellow;
     padding: 12px 25px;
     border-radius: 5px;
@@ -125,12 +151,14 @@ body h2 {
     color: white;
 }
 
+/* Removed the old fixed padding-left: 100px / margin-right: 50px here — that mismatched
+   pair pushed every h3/h4/h5 off-centre instead of the true centre text-align was already
+   giving them, which is what made the page feel lopsided/cluttered. Centring now comes
+   from text-align alone, with .content-wrap or the Bootstrap grid controlling width */
 body h3,
 h4,
 h5 {
     text-align: center;
-    padding-left: 100px;
-    margin-right: 50px;
     color: white;
 }
 
@@ -164,13 +192,159 @@ section dl {
     text-align: center;
 }
 
+/* Same reasoning as the h3/h4/h5 rule above: margin-right: 100px with no matching
+   margin-left made headings inside a <section> drift right instead of sitting centred,
+   which is exactly the inconsistency that showed up between the Afraz and Chengzheng
+   blocks once both were wrapped in <section> elements */
 section h2,
-h3,
-h4,
-h5 {
+section h3,
+section h4,
+section h5 {
     text-align: center;
     padding-top: 20px;
-    margin-right: 100px;
+}
+
+section a {
+    margin: 0;
+    padding-top: 20px;
+}
+
+/* Styles each audio clip as a small dark card, echoing the same rgba(51,52,54,0.9)
+   panel colour used for fieldsets/cards on the other pages, so a new media type still
+   reads as part of the same design language rather than a bare, unstyled <audio> bar */
+.audio-figure {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: rgba(51, 52, 54, 0.9);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.audio-figure figcaption {
+    color: #bdc3c7;
+    margin-bottom: 12px;
+    font-size: 0.95em;
+}
+
+.audio-figure audio {
+    width: 100%;
+}
+
+/* Footer: reuses the header's exact background colour so the page feels bookended by
+   the same dark bar it opened with, rather than introducing a new colour at the bottom */
+footer {
+    background-color: #1a1d29;
+    color: #bdc3c7;
+    padding: 50px 0 20px 0;
+    margin-top: 60px;
+}
+
+footer h5 {
+    color: white;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+footer p {
+    text-align: left;
+    color: #bdc3c7;
+}
+
+footer hr {
+    border-color: rgba(189, 195, 199, 0.25);
+    margin: 30px 0 15px 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e94560;
+    /* Same hover accent used across the rest of the site's links */
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85em;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Centres the last footer column (Chengzheng Hobby) - both its heading and its
+   link list - so it visually matches the centred heading style used elsewhere
+   on the site, instead of the earlier margin-right:60% hack which only shifted
+   the heading and left the links behind, causing it to wrap onto two lines. */
+.col-6.col-md-3:last-child h5,
+.col-6.col-md-3:last-child .footer-links {
+    text-align: center;
+    margin-right: 60%;
+}
+
+/* Interactive benefits checklist (index.js): each <li> in the two benefits
+   lists becomes clickable, so cursor:pointer signals that affordance, and a
+   hover state gives immediate feedback before the click even registers. */
+#soccer-benefits li,
+#coding-benefits li {
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 4px 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#soccer-benefits li:hover,
+#coding-benefits li:hover {
+    background-color: rgba(233, 69, 96, 0.15);
+}
+
+/* Selected state: prefixes a checkmark and switches to the site's accent
+   colour, echoing the same #e94560 used for the logo and link hovers so the
+   feature feels native to the existing design language rather than bolted on. */
+.benefit-selected {
+    color: #e94560 !important;
+    background-color: rgba(233, 69, 96, 0.12);
+}
+
+.benefit-selected::before {
+    content: "✓ ";
+    font-weight: bold;
+}
+
+.benefits-counter {
+    font-size: 0.9em;
+    color: #bdc3c7;
+    margin-top: 10px;
+}
+
+.benefits-reset {
+    display: block;
+    margin: 0 auto 10px auto;
+    background: none;
+    border: 1px solid #6c757d;
+    color: #bdc3c7;
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.benefits-reset:hover {
+    border-color: #e94560;
+    color: #e94560;
 }
 
 section a {
