@@ -203,7 +203,7 @@ section a {
 /* Footer: reuses the header's exact background colour so the page feels bookended by
    the same dark bar it opened with, rather than introducing a new colour at the bottom */
 footer {
-    background-color: #1a1d29;
+    background-color: black;
     color: #bdc3c7;
     padding: 50px 0 20px 0;
     margin-top: 60px;
@@ -316,6 +316,11 @@ footer hr {
     font-size: 0.85em;
     cursor: pointer;
     transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.benefits-reset:hover {
+    border-color: #e94560;
+    color: #e94560;
 }
 
 .benefits-reset:hover {
