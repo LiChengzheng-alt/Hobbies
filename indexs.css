@@ -297,3 +297,8 @@ footer hr {
     color: #6c757d;
     margin: 0;
 }
+
+.col-6.col-md-3:last-child h5 {
+    margin-right: 60%;
+    text-align: center;
+}
