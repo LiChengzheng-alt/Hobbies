@@ -45,38 +45,10 @@ main {
 }
 
 /* STEP 2 UPDATE: Nav link container wrapper spacing */
-nav {
+header nav {
     display: flex;
     gap: 20px;
     /* Adds clean spacing between your links */
-}
-
-.current {
-    text-align: left;
-    padding: 15px 0 0 30px;  /* Spacing inside the container */
-}
-
-/* Target the breadcrumb container for spacing */
-.breadcrumb, 
-nav {
-  padding: 2px 16px;  /* Spacing inside the container */
-  margin-bottom: 20px; /* Spacing below the breadcrumb */
-}
-
-.breadcrumb {
-    --bs-breadcrumb-divider-color: #ffffff;
-}
-
-/* Target all breadcrumb links and text */
-nav a,
-.breadcrumb-item {
-  color: #ffffff; /* Forces link text color to white */
-  text-decoration: none;     /* Optional: removes link underlines */
-}
-
-/* Ensure links remain white on hover or active states */
-.breadcrumb a:hover {
-  text-decoration: underline; /* Optional: underline on hover */
 }
 
 /* STEP 3 STYLING: Hero welcome section banner */
@@ -117,8 +89,7 @@ nav a,
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease, transform 0.2s ease;
-    margin-left: 3%;
-    margin-top: 2%;
+    margin: 15px auto 0 auto;
 }
 
 .laliga-btn:hover {
@@ -138,8 +109,7 @@ nav a,
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease, transform 0.2s ease;
-    margin-left: 3%;
-    margin-top: 2%;
+    margin: 15px auto 0 auto;
 }
 
 .scripting:hover {
@@ -155,9 +125,7 @@ body h2 {
    pair pushed every h3/h4/h5 off-centre instead of the true centre text-align was already
    giving them, which is what made the page feel lopsided/cluttered. Centring now comes
    from text-align alone, with .content-wrap or the Bootstrap grid controlling width */
-body h3,
-h4,
-h5 {
+body h3 {
     text-align: center;
     color: white;
 }
@@ -178,7 +146,7 @@ body ul li {
 }
 
 body table th,
-tr {
+body table tr {
     color: white;
 }
 
@@ -205,6 +173,7 @@ section h5 {
 }
 
 section a {
+    display: inline-block;
     margin: 0;
     padding-top: 20px;
 }
@@ -240,9 +209,8 @@ footer {
     margin-top: 60px;
 }
 
-footer h5 {
+footer h4 {
     color: white;
-    text-align: left;
     margin-bottom: 12px;
 }
 
@@ -256,10 +224,18 @@ footer hr {
     margin: 30px 0 15px 0;
 }
 
+/* All four footer columns share this same left-aligned treatment — no column
+   is special-cased to centre or to have a narrower link list, so the row reads
+   as one consistent unit instead of the last column looking visually distinct
+   from the other three */
 .footer-links {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.col-6.col-md-3:nth-child(2) .footer-links {
+    margin-right: 55%;
 }
 
 .footer-links li {
@@ -277,21 +253,21 @@ footer hr {
     /* Same hover accent used across the rest of the site's links */
 }
 
+/* "Afraz Hobby" and "Chengzheng Hobby" are the two hobby-specific navigation
+   columns, so both are centred to visually pair them apart from the more
+   informational tagline/Site columns on the left */
+.col-6.col-md-3:nth-child(3) h4,
+.col-6.col-md-3:nth-child(3) .footer-links,
+.col-6.col-md-3:nth-child(4) h4,
+.col-6.col-md-3:nth-child(4) .footer-links {
+    text-align: center;
+}
+
 .footer-bottom {
     text-align: center;
     font-size: 0.85em;
     color: #6c757d;
     margin: 0;
-}
-
-/* Centres the last footer column (Chengzheng Hobby) - both its heading and its
-   link list - so it visually matches the centred heading style used elsewhere
-   on the site, instead of the earlier margin-right:60% hack which only shifted
-   the heading and left the links behind, causing it to wrap onto two lines. */
-.col-6.col-md-3:last-child h5,
-.col-6.col-md-3:last-child .footer-links {
-    text-align: center;
-    margin-right: 60%;
 }
 
 /* Interactive benefits checklist (index.js): each <li> in the two benefits
@@ -345,9 +321,4 @@ footer hr {
 .benefits-reset:hover {
     border-color: #e94560;
     color: #e94560;
-}
-
-section a {
-    margin: 0;
-    padding-top: 20px;
 }
