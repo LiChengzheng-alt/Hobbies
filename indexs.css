@@ -1,0 +1,299 @@
+/* Base styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f4f4f9;
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85));
+    overflow: scroll;
+}
+
+/* STEP 2 UPDATE: Simplified flexbox container for header layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    /* Pushes logo to left and nav to right */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1d29;
+    /* Kept the modern dark background color */
+}
+
+main {
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85));
+}
+
+main table {
+    background: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85));
+}
+
+/* Logo styling */
+.logo-container a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e94560;
+    /* Vibrant accent color for Chengzheng and Afraz Hobbies */
+    text-decoration: none;
+}
+
+/* STEP 2 UPDATE: Nav link container wrapper spacing */
+nav {
+    display: flex;
+    gap: 20px;
+    /* Adds clean spacing between your links */
+}
+
+/* Navigation list item resetting styles */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e94560;
+    /* Turns logo color on hover for visual depth */
+}
+
+.current {
+    text-align: left;
+    padding: 15px 0 0 30px;  /* Spacing inside the container */
+}
+
+/* Target the breadcrumb container for spacing */
+.breadcrumb, 
+nav {
+  padding: 2px 16px;  /* Spacing inside the container */
+  margin-bottom: 20px; /* Spacing below the breadcrumb */
+}
+
+.breadcrumb {
+    --bs-breadcrumb-divider-color: #ffffff;
+}
+
+/* Target all breadcrumb links and text */
+nav a,
+.breadcrumb-item {
+  color: #ffffff; /* Forces link text color to white */
+  text-decoration: none;     /* Optional: removes link underlines */
+}
+
+/* Ensure links remain white on hover or active states */
+.breadcrumb a:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+}
+
+/* STEP 3 STYLING: Hero welcome section banner */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+}
+
+
+.hero-section h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #bdc3c7;
+}
+
+/* Caps paragraph-heavy blocks at a comfortable reading width and centres them, instead
+   of letting text run the full width of the screen on a large monitor. Re-used across
+   the hero text and both hobby sections so the whole page reads at one consistent measure */
+.content-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* STEP 3 STYLING: Attention-grabbing LaLiga CTA button */
+.laliga-btn {
+    display: inline-block;
+    background-color: #ff9f43;
+    /* Vibrant orange button color background */
+    color: #1a1d29;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+.laliga-btn:hover {
+    background-color: #f39c12;
+    /* don't need to put */
+    /* Smoothly darkens slightly on desktop hover */
+    transform: translateY(-2px);
+    /* Subtle lift effect */
+}
+
+.scripting {
+    display: inline-block;
+    background-color: darkblue;
+    /* Blue button color background */
+    color: yellow;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+.scripting:hover {
+    transform: translateY(-2px);
+}
+
+body h2 {
+    text-align: center;
+    color: white;
+}
+
+/* Removed the old fixed padding-left: 100px / margin-right: 50px here — that mismatched
+   pair pushed every h3/h4/h5 off-centre instead of the true centre text-align was already
+   giving them, which is what made the page feel lopsided/cluttered. Centring now comes
+   from text-align alone, with .content-wrap or the Bootstrap grid controlling width */
+body h3,
+h4,
+h5 {
+    text-align: center;
+    color: white;
+}
+
+body p {
+    color: #bdc3c7;
+    text-align: center;
+}
+
+body hr {
+    color: white;
+}
+
+body ul li {
+    color: #bdc3c7;
+    text-align: center;
+    list-style-position: inside;
+}
+
+body table th,
+tr {
+    color: white;
+}
+
+section dd {
+    color: #bdc3c7;
+    text-align: center;
+}
+
+section dl {
+    color: #bdc3c7;
+    text-align: center;
+}
+
+/* Same reasoning as the h3/h4/h5 rule above: margin-right: 100px with no matching
+   margin-left made headings inside a <section> drift right instead of sitting centred,
+   which is exactly the inconsistency that showed up between the Afraz and Chengzheng
+   blocks once both were wrapped in <section> elements */
+section h2,
+section h3,
+section h4,
+section h5 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+section a {
+    margin: 0;
+    padding-top: 20px;
+}
+
+/* Styles each audio clip as a small dark card, echoing the same rgba(51,52,54,0.9)
+   panel colour used for fieldsets/cards on the other pages, so a new media type still
+   reads as part of the same design language rather than a bare, unstyled <audio> bar */
+.audio-figure {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: rgba(51, 52, 54, 0.9);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.audio-figure figcaption {
+    color: #bdc3c7;
+    margin-bottom: 12px;
+    font-size: 0.95em;
+}
+
+.audio-figure audio {
+    width: 100%;
+}
+
+/* Footer: reuses the header's exact background colour so the page feels bookended by
+   the same dark bar it opened with, rather than introducing a new colour at the bottom */
+footer {
+    background-color: #1a1d29;
+    color: #bdc3c7;
+    padding: 50px 0 20px 0;
+    margin-top: 60px;
+}
+
+footer h5 {
+    color: white;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+footer p {
+    text-align: left;
+    color: #bdc3c7;
+}
+
+footer hr {
+    border-color: rgba(189, 195, 199, 0.25);
+    margin: 30px 0 15px 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e94560;
+    /* Same hover accent used across the rest of the site's links */
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.85em;
+    color: #6c757d;
+    margin: 0;
+}
