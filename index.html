@@ -79,14 +79,12 @@
                         <!-- Wrapping each subtopic in its own <section>, matching the structure
                              already used below for Chengzheng hobby, so both partners' content
                              gets identical heading spacing instead of drifting apart -->
-                        <section>
-                            <h3>Afraz hobby</h3>
-                            <p>This is where I share my love for football and La Liga. I've built this page as a place
-                                to post free
-                                coaching drills, fuel and recovery tips for young players, and the gear I actually use
-                                when I train and
-                                play.</p>
-                        </section>
+                        <h2>Afraz hobby</h2>
+                        <p>This is where I share my love for football and La Liga. I've built this page as a place
+                            to post free
+                            coaching drills, fuel and recovery tips for young players, and the gear I actually use
+                            when I train and
+                            play.</p>
                         <section>
                             <h3>Why you should sign up for Afraz hobby?</h3>
                             <p>Signing up gets you access to everything on this page - free coaching drills you can
@@ -112,19 +110,17 @@
                             <button type="button" class="benefits-reset" data-reset-for="soccer-benefits">Reset
                                 selections</button>
                         </section>
+                        <div class="text-center">
+                            <h3>Join La liga</h3>
+                            <a href="LaLigaJoinNow.html" class="laliga-btn">Join Now for LaLiga Updates</a>
+                        </div>
                     </article>
-                    <section class="text-center">
-                        <h3>Join La liga</h3>
-                        <a href="LaLigaJoinNow.html" class="laliga-btn">Join Now for LaLiga Updates</a>
-                    </section>
                     <hr>
                     <article>
-                        <section>
-                            <!-- My hobby-->
-                            <h3>Chengzheng hobby</h3>
-                            <!-- Description of my hobby-->
-                            <p>My hobby is programming with Python and building real-world software applications.</p>
-                        </section>
+                        <!-- My hobby-->
+                        <h2>Chengzheng hobby</h2>
+                        <!-- Description of my hobby-->
+                        <p>My hobby is programming with Python and building real-world software applications.</p>
                         <section>
                             <h3>Why you should sign up for Chengzheng hobby?</h3>
                             <p>Signing up gives you step-by-step Python lessons, downloadable project templates, and
@@ -134,38 +130,36 @@
                                 helps you master core concepts required for technical job interviews.</p>
                         </section>
                         <section>
-                            <section>
-                                <!-- Why you should do my hobby?-->
-                                <h3>Benefits of coding?</h3>
-                                <ul id="coding-benefits">
-                                    <li>Improve your logical thinking</li>
-                                    <li>Automate repetitive tasks for roles like AI engineering</li>
-                                    <li>Get into high-income roles like penetration tester</li>
-                                    <li>Scale defense roles in cybersecurity</li>
-                                </ul>
-                                <p class="benefits-counter" id="coding-benefits-counter" aria-live="polite">Click a
-                                    benefit you're interested in</p>
-                                <button type="button" class="benefits-reset" data-reset-for="coding-benefits">Reset
-                                    selections</button>
-                                <!-- Multimedia requirement: a short audio intro, alongside the video
+                            <!-- Why you should do my hobby?-->
+                            <h3>Benefits of coding?</h3>
+                            <ul id="coding-benefits">
+                                <li>Improve your logical thinking</li>
+                                <li>Automate repetitive tasks for roles like AI engineering</li>
+                                <li>Get into high-income roles like penetration tester</li>
+                                <li>Scale defense roles in cybersecurity</li>
+                            </ul>
+                            <p class="benefits-counter" id="coding-benefits-counter" aria-live="polite">Click a
+                                benefit you're interested in</p>
+                            <button type="button" class="benefits-reset" data-reset-for="coding-benefits">Reset
+                                selections</button>
+                            <!-- Multimedia requirement: a short audio intro, alongside the video
                                  walkthroughs already used on the Learn Coding page. figure/figcaption
                                  is the correct semantic pairing for a piece of media plus its caption,
                                  rather than just a bare <audio> tag with no labelling -->
-                                <figure class="audio-figure">
-                                    <figcaption>🎧 Listen: The music I listen to during my coding period</figcaption>
-                                    <audio controls>
-                                        <source src="/multimedia/Audio/Morning-Routine-Lofi-Study-Music(chosic.com).mp3"
-                                            type="audio/mp3">
-                                    </audio>
-                                </figure>
-                            </section>
+                            <figure class="audio-figure">
+                                <figcaption>🎧 Listen: The music I listen to during my coding period</figcaption>
+                                <audio controls>
+                                    <source src="/multimedia/Audio/Morning-Routine-Lofi-Study-Music(chosic.com).mp3"
+                                        type="audio/mp3">
+                                </audio>
+                            </figure>
                         </section>
+                        <!-- A button that directs you to join my hobby-->
+                        <div class="text-center">
+                            <h3>Join Coding</h3>
+                            <a href="/ChengzhengHTMLFiles/joinnow.html" class="scripting">Join Now for Coding</a>
+                        </div>
                     </article>
-                    <!-- A button that directs you to join my hobby-->
-                    <section class="text-center">
-                        <h3>Join Coding</h3>
-                        <a href="/ChengzhengHTMLFiles/joinnow.html" class="scripting">Join Now for Coding</a>
-                    </section>
                 </div>
             </div>
         </div>
@@ -177,12 +171,12 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-6 col-md-3">
-                    <h5>Afraz and Chengzheng's hobbies</h5>
+                    <h4>Afraz and Chengzheng's hobbies</h4>
                     <p>A shared space for football and Python - two different hobbies, one page to bring like-minded
                         people into both.</p>
                 </div>
                 <div class="col-6 col-md-3">
-                    <h5>Site</h5>
+                    <h4>Site</h4>
                     <!-- Its own landmark rather than folding "Homepage" into one of the
                          hobby-specific lists below, since it belongs to neither hobby -->
                     <nav aria-label="Footer site links">
@@ -194,7 +188,7 @@
                         email.</p>
                 </div>
                 <div class="col-6 col-md-3">
-                    <h5>Afraz Hobby</h5>
+                    <h4>Afraz Hobby</h4>
                     <!-- Mirrors the four items already in the header's "Afraz hobby" dropdown,
                          so the footer acts as a second, always-visible route to the same pages
                          instead of introducing a different set of destinations -->
@@ -208,7 +202,7 @@
                     </nav>
                 </div>
                 <div class="col-6 col-md-3">
-                    <h5>Chengzheng Hobby</h5>
+                    <h4>Chengzheng Hobby</h4>
                     <nav aria-label="Footer Chengzheng hobby links">
                         <ul class="footer-links">
                             <li><a href="/ChengzhengHTMLFiles/joinnow.html">Join Now</a></li>
