@@ -21,15 +21,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Builds the localStorage key for a given list, e.g. "benefits-selected:soccer-benefits".
+// Prefixing with "benefits-selected:" keeps this namespaced so it can't collide with
+// any other localStorage keys the site might use elsewhere (e.g. LearnNow.js's
+// "watched-<videoId>" keys).
 function storageKey(listId) {
     return `benefits-selected:${listId}`;
 }
 
+// Reads this list's previously selected item indexes back out of localStorage
+// (the external Web Storage API). Stored as a JSON array string, so it's parsed
+// back into a real array here; an empty array is returned if nothing was saved yet.
 function getSelectedIndexes(listId) {
     const raw = localStorage.getItem(storageKey(listId));
     return raw ? JSON.parse(raw) : [];
 }
 
+// Writes the current set of selected indexes back to localStorage as a JSON
+// string, overwriting whatever was saved before. Called every time a benefit
+// is toggled, so the saved state never falls out of sync with what's on screen.
 function saveSelectedIndexes(listId, indexes) {
     localStorage.setItem(storageKey(listId), JSON.stringify(indexes));
 }
@@ -68,6 +78,9 @@ function initBenefitsList(listId, counterId) {
     updateCounter(counter, items);
 }
 
+// Runs on every click/keypress on a benefit <li>: flips its selected state,
+// refreshes the counter text, then re-reads every item's current state via
+// aria-pressed to rebuild the full list of selected indexes and persist it.
 function toggleBenefit(listId, item, counter, items) {
     const nowSelected = item.getAttribute("aria-pressed") !== "true";
     markSelected(item, nowSelected);
@@ -79,11 +92,17 @@ function toggleBenefit(listId, item, counter, items) {
     saveSelectedIndexes(listId, selectedIndexes);
 }
 
+// Applies (or removes) the visual "selected" styling on one item and keeps its
+// aria-pressed attribute in sync, since that attribute is what screen readers
+// use to announce the toggle state and what toggleBenefit() reads back later.
 function markSelected(item, selected) {
     item.classList.toggle("benefit-selected", selected);
     item.setAttribute("aria-pressed", selected ? "true" : "false");
 }
 
+// Updates the aria-live counter text (DOM manipulation) to reflect how many
+// items in this list are currently selected, so the count is always visibly
+// (and audibly, for screen readers) in sync with the checkmarks on screen.
 function updateCounter(counter, items) {
     const selectedCount = items.filter(
         (li) => li.getAttribute("aria-pressed") === "true"
@@ -96,6 +115,9 @@ function updateCounter(counter, items) {
     }
 }
 
+// Clears every selection in one list: resets each item's visual/aria state,
+// refreshes the counter back to its default text, and overwrites this list's
+// localStorage entry with an empty array so the reset also survives a refresh.
 function resetBenefitsList(listId) {
     const list = document.getElementById(listId);
     const counter = document.getElementById(`${listId}-counter`);
