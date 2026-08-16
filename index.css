@@ -326,6 +326,8 @@ footer hr {
 /* Small, muted label so the live selection count (updated by index.js) reads
    as a status hint rather than competing with the benefits list itself */
 .benefits-counter {
+    font-size: 0.9em;
+    color: #bdc3c7;
     margin-top: 10px;
 }
 
