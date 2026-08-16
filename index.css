@@ -33,6 +33,7 @@ header {
 main {
     background-color: #1a1d29;
     background-image: linear-gradient(rgba(26, 27, 41, 0.85), rgba(26, 27, 41, 0.85));
+    font-size: 1.2em;
 }
 
 /* Logo styling */
@@ -51,7 +52,10 @@ header nav {
     /* Adds clean spacing between your links */
 }
 
-/* STEP 3 STYLING: Hero welcome section banner */
+/* STEP 3 STYLING: Hero welcome section banner.
+   Plain block-level styling (no Bootstrap classes) is used here because the
+   hero is a one-off full-width intro, not a repeating grid component, so
+   custom padding/centring is simpler than reaching for Bootstrap utilities. */
 .hero-section {
     text-align: center;
     padding: 80px 20px;
@@ -99,11 +103,14 @@ header nav {
     transform: translateY(-2px);
 }
 
+/* Chengzheng's equivalent call-to-action button, styled in blue rather than
+   orange so the two hobby sections are visually distinguishable from each
+   other while still sharing the same button shape/spacing as .laliga-btn */
 .scripting {
     display: inline-block;
     background-color: darkblue;
     /* Blue button color background */
-    color: white;;
+    color: white;
     padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
@@ -112,24 +119,25 @@ header nav {
     margin: 15px auto 0 auto;
 }
 
+/* Same lift-on-hover feedback as .laliga-btn:hover, without a colour change
+   since darkblue is already the accent colour for this button */
 .scripting:hover {
     transform: translateY(-2px);
-}
-
-body h2 {
-    text-align: center;
-    color: white;
 }
 
 /* Removed the old fixed padding-left: 100px / margin-right: 50px here — that mismatched
    pair pushed every h3/h4/h5 off-centre instead of the true centre text-align was already
    giving them, which is what made the page feel lopsided/cluttered. Centring now comes
    from text-align alone, with .content-wrap or the Bootstrap grid controlling width */
+body h2,
 body h3 {
     text-align: center;
     color: white;
 }
 
+/* Muted grey rather than pure white so body copy reads as secondary to the
+   white headings above it, and centred to match the rest of the page's
+   symmetrical layout */
 body p {
     color: #bdc3c7;
     text-align: center;
@@ -139,6 +147,9 @@ body hr {
     color: white;
 }
 
+/* list-style-position: inside keeps each bullet tucked next to its centred
+   text instead of the bullet sitting off to the left of a centred line,
+   which is what happens with the browser's default outside position */
 body ul li {
     color: #bdc3c7;
     text-align: center;
@@ -172,6 +183,9 @@ section h5 {
     padding-top: 20px;
 }
 
+/* Switches an in-section link from block-level back to inline-block so it
+   only takes up as much width as its own text/padding, while padding-top
+   still gives it breathing room from whatever sits above it */
 section a {
     display: inline-block;
     margin: 0;
@@ -196,6 +210,8 @@ section a {
     font-size: 0.95em;
 }
 
+/* Full-width native audio player so it fills the card instead of leaving
+   awkward empty space beside a fixed-width default player */
 .audio-figure audio {
     width: 100%;
 }
@@ -214,6 +230,9 @@ footer h4 {
     margin-bottom: 12px;
 }
 
+/* Left-aligned rather than the centred style used for body copy elsewhere,
+   since footer columns read more naturally as left-aligned text blocks
+   sitting side by side */
 footer p {
     text-align: left;
     color: #bdc3c7;
@@ -234,6 +253,11 @@ footer hr {
     margin: 0;
 }
 
+/* The "Site" column only has one short link ("Homepage"), so without this
+   rule its list would stretch as wide as the paragraph above it and look
+   visually heavier than a single link needs to be. Pulling the right edge
+   in by 55% keeps that list tight and left-hugging like a short link
+   actually should look, instead of matching the wider columns beside it. */
 .col-6.col-md-3:nth-child(2) .footer-links {
     margin-right: 55%;
 }
@@ -299,12 +323,17 @@ footer hr {
     font-weight: bold;
 }
 
+/* Small, muted label so the live selection count (updated by index.js) reads
+   as a status hint rather than competing with the benefits list itself */
 .benefits-counter {
     font-size: 0.9em;
     color: #bdc3c7;
     margin-top: 10px;
 }
 
+/* Outlined "ghost" button style (no fill) so Reset reads as a secondary,
+   low-commitment action next to the bolder Join Now buttons elsewhere on
+   the page */
 .benefits-reset {
     display: block;
     margin: 0 auto 10px auto;
