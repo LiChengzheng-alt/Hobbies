@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chengzheng and Afraz hobbies</title>
+    <!-- Bootstrap 5 CSS + bundled JS (Popper included) loaded from CDN so the
+         navbar dropdowns, grid system and responsive utilities used further
+         down the page work without us having to hand-write that JS ourselves -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Our own CSS is linked after Bootstrap so our rules (dark theme, custom
+         buttons, benefits-list styling, etc.) can override Bootstrap's defaults
+         where needed, instead of Bootstrap overriding us -->
     <link rel="stylesheet" href="../ChengzhengCSSfiles/index.css" />
     <script src="../ChengzhengJSFiles/index.js"></script>
 </head>
@@ -14,10 +20,17 @@
 <body>
     <!-- Header Navigation Bar containing both your logo and your partner's navigation items -->
     <header>
-        <!-- 1. Logo section -->
+        <!-- Site logo/brand link: kept as a plain <a> rather than an <img>
+             so it stays lightweight and doubles as a "return to homepage"
+             link, matching the convention Bootstrap navbars normally use
+             for a navbar-brand element -->
         <div class="logo-container">
             <a href="./index.html">Afraz and Chengzheng's hobbies</a>
         </div>
+        <!-- Bootstrap navbar component: navbar-expand-lg collapses the menu
+             into a toggler button on small/medium screens and expands it on
+             large screens, so we get responsive navigation for free instead
+             of writing our own media-query-driven hide/show logic -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -25,6 +38,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Two Bootstrap dropdown menus, one per teammate's hobby, so a
+                         visitor can jump straight to either person's pages from any
+                         screen in the site without the navbar growing too wide -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="JoinNowDropdown" role="button"
@@ -105,8 +121,14 @@
                                 <li>Encourage you to play soccer</li>
                                 <li>Helps you to develop a healthy hobby</li>
                             </ul>
+                            <!-- aria-live="polite" so screen readers announce the updated
+                                 selection count from index.js as it changes, instead of the
+                                 update happening silently for non-visual users -->
                             <p class="benefits-counter" id="soccer-benefits-counter" aria-live="polite">Click a benefit
                                 you're interested in</p>
+                            <!-- data-reset-for links this button to the #soccer-benefits list
+                                 by id, so index.js can use one shared reset handler for both
+                                 the soccer and coding lists instead of duplicating the function -->
                             <button type="button" class="benefits-reset" data-reset-for="soccer-benefits">Reset
                                 selections</button>
                         </section>
@@ -117,9 +139,13 @@
                     </article>
                     <hr>
                     <article>
-                        <!-- My hobby-->
+                        <!-- Chengzheng's hobby block, structured to mirror the Afraz block above
+                             (heading, intro paragraph, "why sign up" section, benefits list,
+                             call-to-action) so the two partners' content feels like one
+                             consistent page rather than two mismatched halves -->
                         <h2>Chengzheng hobby</h2>
-                        <!-- Description of my hobby-->
+                        <!-- Short one-line summary of the hobby, placed directly under the
+                             heading the same way the Afraz block introduces football above -->
                         <p>My hobby is programming with Python and building real-world software applications.</p>
                         <section>
                             <h3>Why you should sign up for Chengzheng hobby?</h3>
@@ -130,7 +156,8 @@
                                 helps you master core concepts required for technical job interviews.</p>
                         </section>
                         <section>
-                            <!-- Why you should do my hobby?-->
+                            <!-- Same "benefits" pattern as the soccer section above: a short,
+                                 skimmable list of concrete reasons to pick up the hobby -->
                             <h3>Benefits of coding?</h3>
                             <ul id="coding-benefits">
                                 <li>Improve your logical thinking</li>
@@ -149,12 +176,13 @@
                             <figure class="audio-figure">
                                 <figcaption>🎧 Listen: The music I listen to during my coding period</figcaption>
                                 <audio controls>
-                                    <source src="/multimedia/Audio/Morning-Routine-Lofi-Study-Music(chosic.com).mp3"
+                                    <source src="../multimedia/Audio/Morning-Routine-Lofi-Study-Music(chosic.com).mp3"
                                         type="audio/mp3">
                                 </audio>
                             </figure>
                         </section>
-                        <!-- A button that directs you to join my hobby-->
+                        <!-- Call-to-action matching the "Join La liga" block above, so both
+                             hobby sections end on the same kind of prompt -->
                         <div class="text-center">
                             <h3>Join Coding</h3>
                             <a href="./joinnow.html" class="scripting">Join Now for Coding</a>
@@ -203,6 +231,8 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <h4>Chengzheng Hobby</h4>
+                    <!-- Same "second route to the same pages" reasoning as the Afraz
+                         footer column above, kept for the Chengzheng dropdown -->
                     <nav aria-label="Footer Chengzheng hobby links">
                         <ul class="footer-links">
                             <li><a href="./joinnow.html">Join Now</a></li>
